@@ -1,6 +1,8 @@
 package input
 
 import (
+	"time"
+
 	"github.com/gdamore/tcell/v2"
 	"github.com/user/go-rogue/internal/domain/entities"
 	"github.com/user/go-rogue/internal/domain/game"
@@ -45,6 +47,9 @@ type Handler struct {
 	screen      *renderer.Screen
 	viewManager *views.Manager
 	gameEngine  *game.Engine
+
+	// Debounce for cancel keys to prevent key repeat issues
+	lastCancelTime int64
 }
 
 // NewHandler creates a new input handler
@@ -77,13 +82,59 @@ func (h *Handler) HandleInput() Action {
 func (h *Handler) handleKeyEvent(ev *tcell.EventKey) Action {
 	currentView := h.viewManager.CurrentView()
 
-	// Global quit
-	if ev.Key() == tcell.KeyEscape {
+	// Get session state for item selection check
+	session := h.gameEngine.GetSession()
+	selectingItem := false
+	if session != nil {
+		selectingItem = session.SelectingItem
+	}
+
+	// Check for ESC key OR Backspace as alternative cancel (Windows ESC workaround)
+	isEscapeAction := ev.Key() == tcell.KeyEscape || ev.Key() == tcell.KeyBackspace || ev.Key() == tcell.KeyBackspace2
+
+	// Handle cancel/escape for item selection and inventory FIRST (before global handler)
+	if isEscapeAction {
+		// Debounce: ignore cancel keys within 100ms of last cancel (prevents key repeat issues)
+		now := time.Now().UnixMilli()
+		if now-h.lastCancelTime < 100 {
+			return ActionNone
+		}
+		h.lastCancelTime = now
+
+		// If in GameView with item selection active, cancel selection first
+		if currentView == views.GameView && selectingItem {
+			h.gameEngine.CancelItemSelection()
+			return ActionCancel
+		}
+
+		// If in InventoryView, return to game
+		if currentView == views.InventoryView {
+			h.viewManager.SetView(views.GameView)
+			return ActionCancel
+		}
+
+		// If in LeaderboardView, return to menu
+		if currentView == views.LeaderboardView {
+			h.viewManager.SetView(views.MainMenu)
+			return ActionCancel
+		}
+
+		// If in GameOverView, return to menu
+		if currentView == views.GameOverView || currentView == views.VictoryView {
+			h.viewManager.SetView(views.MainMenu)
+			return ActionConfirm
+		}
+
+		// If in GameView (not selecting), go to main menu
 		if currentView == views.GameView {
 			h.viewManager.SetView(views.MainMenu)
 			return ActionNone
 		}
-		return ActionQuit
+
+		// In main menu, quit
+		if currentView == views.MainMenu {
+			return ActionQuit
+		}
 	}
 
 	if ev.Key() == tcell.KeyCtrlC {
@@ -213,8 +264,9 @@ func (h *Handler) handleGameInput(ev *tcell.EventKey) Action {
 func (h *Handler) handleItemSelection(ev *tcell.EventKey) Action {
 	session := h.gameEngine.GetSession()
 
-	// Cancel selection
-	if ev.Key() == tcell.KeyEscape {
+	// Cancel selection with ESC, Backspace, or X key
+	if ev.Key() == tcell.KeyEscape || ev.Key() == tcell.KeyBackspace || ev.Key() == tcell.KeyBackspace2 ||
+		ev.Rune() == 'x' || ev.Rune() == 'X' {
 		h.gameEngine.CancelItemSelection()
 		return ActionCancel
 	}
@@ -267,7 +319,7 @@ func (h *Handler) handleInventoryInput(ev *tcell.EventKey) Action {
 	}
 
 	switch ev.Rune() {
-	// Use ESC or Q to close inventory (not 'I' - key repeat causes immediate close)
+	// Use Q to close inventory (not 'I' - key repeat causes immediate close)
 	case 'q', 'Q':
 		h.viewManager.SetView(views.GameView)
 		return ActionCancel

@@ -135,5 +135,5 @@ func (v *GameViewRender) renderItemSelection(session *entities.Session) {
 	}
 
 	// Instructions
-	v.screen.DrawString(boxX+2, boxY+boxHeight-2, "[ESC] Cancel", tcell.ColorGray, tcell.ColorDarkGray)
+	v.screen.DrawString(boxX+2, boxY+boxHeight-2, "[X/Backspace] Cancel", tcell.ColorGray, tcell.ColorDarkGray)
 }
