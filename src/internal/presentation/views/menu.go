@@ -1,6 +1,8 @@
 package views
 
 import (
+	"unicode/utf8"
+
 	"github.com/gdamore/tcell/v2"
 	"github.com/user/go-rogue/internal/domain/game"
 	"github.com/user/go-rogue/internal/presentation/renderer"
@@ -30,8 +32,8 @@ func (v *MenuView) Render() {
 	title := "GO ROGUE"
 	subtitle := "A Roguelike Adventure"
 
-	v.screen.DrawString(centerX-len(title)/2, centerY-8, title, tcell.ColorOrange, tcell.ColorBlack)
-	v.screen.DrawString(centerX-len(subtitle)/2, centerY-6, subtitle, tcell.ColorYellow, tcell.ColorBlack)
+	v.screen.DrawString(centerX-utf8.RuneCountInString(title)/2, centerY-8, title, tcell.ColorOrange, tcell.ColorBlack)
+	v.screen.DrawString(centerX-utf8.RuneCountInString(subtitle)/2, centerY-6, subtitle, tcell.ColorYellow, tcell.ColorBlack)
 
 	// ASCII art dungeon
 	art := []string{
@@ -40,7 +42,7 @@ func (v *MenuView) Render() {
 		"    │....@....│     │.........│",
 		"    │.........│     │.........│",
 		"    └────┬────┘     └────┬────┘",
-		"         │               │",
+		"         │               │     ",
 		"    ┌────┴────┐     ┌────┴────┐",
 		"    │.........│─────│....%....│",
 		"    │.........│     │.........│",
@@ -48,7 +50,7 @@ func (v *MenuView) Render() {
 	}
 
 	for i, line := range art {
-		v.screen.DrawString(centerX-len(line)/2, centerY-4+i, line, tcell.ColorOrange, tcell.ColorBlack)
+		v.screen.DrawString(centerX-utf8.RuneCountInString(line)/2, centerY-4+i, line, tcell.ColorOrange, tcell.ColorBlack)
 	}
 
 	// Menu options
@@ -67,5 +69,5 @@ func (v *MenuView) Render() {
 
 	// Footer
 	footer := "Press a key to select"
-	v.screen.DrawString(centerX-len(footer)/2, height-2, footer, tcell.ColorGray, tcell.ColorBlack)
+	v.screen.DrawString(centerX-utf8.RuneCountInString(footer)/2, height-2, footer, tcell.ColorGray, tcell.ColorBlack)
 }

@@ -114,8 +114,10 @@ func (s *Screen) SetCellStyle(x, y int, ch rune, fgName, bgName string) {
 
 // DrawString draws a string at position
 func (s *Screen) DrawString(x, y int, str string, fg, bg tcell.Color) {
-	for i, ch := range str {
-		s.SetCell(x+i, y, ch, fg, bg)
+	col := 0
+	for _, ch := range str {
+		s.SetCell(x+col, y, ch, fg, bg)
+		col++
 	}
 }
 

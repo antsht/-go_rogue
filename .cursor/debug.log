@@ -1,0 +1,985 @@
+{"data":{"currentView":0},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322422557}
+{"data":{"currentView":0},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322422563}
+{"data":{"action":0,"currentView":0},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322422563}
+{"data":{"currentView":0},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322422563}
+{"data":{"currentView":0},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322422565}
+{"data":{"currentView":0,"key":256,"rune":"n"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322424707}
+{"data":{"action":22,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322424718}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322424718}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322424718}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322424720}
+{"data":{"currentView":1,"key":256,"rune":"n"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322424720}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322424720}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322424720}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322424720}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322424721}
+{"data":{"currentView":1,"key":256,"rune":"i"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322425754}
+{"data":{"fromView":1},"hypothesisId":"A","location":"handler.go:handleGameInput","message":"Setting view to InventoryView","sessionId":"debug-session","timestamp":1768322425754}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322425754}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322425754}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322425756}
+{"data":{"currentView":2,"key":256,"rune":"i"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322425756}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322425756}
+{"data":{"key":256,"rune":"i"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322425756}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322425756}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322425756}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322425757}
+{"data":{"currentView":2,"key":256,"rune":"i"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322427243}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322427243}
+{"data":{"key":256,"rune":"i"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322427243}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322427243}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322427243}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322427244}
+{"data":{"currentView":2,"key":256,"rune":"i"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322427244}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322427244}
+{"data":{"key":256,"rune":"i"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322427244}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322427244}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322427245}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322427245}
+{"data":{"currentView":2,"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322429690}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322429690}
+{"data":{"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322429690}
+{"data":{"rune":"q"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Q pressed - closing inventory","sessionId":"debug-session","timestamp":1768322429690}
+{"data":{"action":20,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322429690}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322429690}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322429690}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322429692}
+{"data":{"currentView":1,"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322429692}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322429692}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322429692}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322429692}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322429693}
+{"data":{"currentView":1,"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322431075}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322431075}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322431075}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322431075}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322431076}
+{"data":{"currentView":1,"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322431076}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322431077}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322431077}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322431077}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322431078}
+{"data":{"currentView":1,"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322431914}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322431914}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322431914}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322431914}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322431915}
+{"data":{"currentView":1,"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322431915}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322431915}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322431915}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322431915}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322431917}
+{"data":{"currentView":1,"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322432659}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322432659}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322432659}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322432659}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322432661}
+{"data":{"currentView":1,"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322432661}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322432661}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322432661}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322432661}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322432662}
+{"data":{"currentView":1,"key":256,"rune":"n"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322434162}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322434162}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322434162}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322434162}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322434163}
+{"data":{"currentView":1,"key":256,"rune":"n"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322434163}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322434163}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322434164}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322434164}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322434165}
+{"data":{"currentView":1,"key":256,"rune":"i"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322434978}
+{"data":{"fromView":1},"hypothesisId":"A","location":"handler.go:handleGameInput","message":"Setting view to InventoryView","sessionId":"debug-session","timestamp":1768322434978}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322434978}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322434978}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322434980}
+{"data":{"currentView":2,"key":256,"rune":"i"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322434980}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322434980}
+{"data":{"key":256,"rune":"i"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322434980}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322434980}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322434980}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322434982}
+{"data":{"currentView":2,"key":256,"rune":"h"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322440659}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322440659}
+{"data":{"key":256,"rune":"h"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322440659}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322440659}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322440659}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322440660}
+{"data":{"currentView":2,"key":256,"rune":"h"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322440661}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322440661}
+{"data":{"key":256,"rune":"h"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322440661}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322440661}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322440661}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322440662}
+{"data":{"currentView":2,"key":256,"rune":"j"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322442035}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322442035}
+{"data":{"key":256,"rune":"j"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322442035}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322442035}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322442035}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322442037}
+{"data":{"currentView":2,"key":256,"rune":"j"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322442037}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322442037}
+{"data":{"key":256,"rune":"j"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322442037}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322442037}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322442037}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322442038}
+{"data":{"currentView":2,"key":256,"rune":"k"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322442547}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322442547}
+{"data":{"key":256,"rune":"k"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322442547}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322442547}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322442547}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322442549}
+{"data":{"currentView":2,"key":256,"rune":"k"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322442549}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322442549}
+{"data":{"key":256,"rune":"k"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322442549}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322442549}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322442549}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322442551}
+{"data":{"currentView":2,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322444411}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322444411}
+{"data":{"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322444411}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322444411}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322444411}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322444413}
+{"data":{"currentView":2,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322444413}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322444413}
+{"data":{"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322444413}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322444413}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322444413}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322444415}
+{"data":{"currentView":2,"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322445611}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322445611}
+{"data":{"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322445611}
+{"data":{"rune":"q"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Q pressed - closing inventory","sessionId":"debug-session","timestamp":1768322445611}
+{"data":{"action":20,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322445611}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322445611}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322445611}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322445614}
+{"data":{"currentView":1,"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322445614}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322445614}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322445614}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322445614}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322445615}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446403}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446403}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446403}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446403}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446404}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446404}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446404}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446404}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446404}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446405}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446652}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446652}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446652}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446652}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446653}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446653}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446654}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446654}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446654}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446655}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446698}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446698}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446698}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446698}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446699}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446699}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446699}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446699}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446699}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446700}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446729}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446729}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446729}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446729}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446729}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446729}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446729}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446729}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446731}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446732}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446760}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446760}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446760}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446760}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446761}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446761}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446761}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446761}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446761}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446762}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446792}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446792}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446792}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446792}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446793}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446793}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446793}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446794}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446794}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446794}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446824}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446824}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446824}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446824}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446825}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446825}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446826}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446826}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446826}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446827}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446854}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446854}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446854}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446854}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446855}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446855}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446855}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446855}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446855}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446856}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446886}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446886}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446886}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446886}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446886}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446886}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446886}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446887}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446887}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446888}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446918}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446918}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446918}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446918}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446919}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446919}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446919}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446919}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446919}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446920}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446949}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446949}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446949}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446949}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446950}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322446950}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322446950}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322446950}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322446950}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322446951}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447298}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447298}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447298}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447298}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447300}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447300}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447300}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447300}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447301}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447302}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447559}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447559}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447559}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447559}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447560}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447560}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447560}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447560}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447560}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447561}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447590}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447590}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447590}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447590}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447592}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447592}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447592}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447592}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447592}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447592}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447621}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447621}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447621}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447621}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447623}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447623}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447623}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447623}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447623}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447624}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447653}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447653}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447653}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447653}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447655}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447655}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447655}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447655}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447655}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447656}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447685}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447685}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447685}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447685}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447686}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447686}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447686}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447686}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447686}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447687}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447715}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447715}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447715}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447715}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447716}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447716}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447716}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447716}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447716}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447716}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447749}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447749}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447749}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447749}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447750}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447750}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447750}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447751}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447751}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447753}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447793}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447793}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447793}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447793}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447794}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447794}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447794}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447794}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447794}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447795}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447824}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447824}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447824}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447824}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447825}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447825}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447825}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447826}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447826}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447826}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447987}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447987}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447987}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447987}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447988}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322447988}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322447988}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322447988}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322447988}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322447989}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448247}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448247}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448247}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448247}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448248}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448249}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448249}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448249}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448249}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448250}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448278}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448278}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448278}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448278}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448279}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448279}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448279}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448279}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448279}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448280}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448309}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448309}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448309}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448309}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448310}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448310}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448310}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448310}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448310}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448310}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448340}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448340}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448340}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448340}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448340}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448340}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448341}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448341}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448341}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448341}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448370}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448370}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448370}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448370}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448370}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448370}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448370}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448371}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448371}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448372}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448401}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448401}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448401}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448401}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448402}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448402}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448402}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448402}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448402}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448403}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448506}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448506}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448506}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448506}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448508}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448508}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448508}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448508}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448508}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448509}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448761}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448761}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448761}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448761}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448762}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448762}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448762}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448762}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448763}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448764}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448792}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448792}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448792}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448792}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448793}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448794}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448794}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448794}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448794}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448795}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448822}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448822}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448822}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448822}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448823}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448824}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448824}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448824}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448824}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448825}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448870}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448870}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448870}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448870}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448871}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448871}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448871}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448871}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448871}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448872}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448901}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448901}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448901}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448901}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448902}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448902}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448902}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448903}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448903}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448904}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448934}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448934}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448934}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448934}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448935}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448935}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448935}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448935}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448935}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448937}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448964}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448964}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448964}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448964}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448965}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448965}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448965}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448965}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448965}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448966}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448995}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448995}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448995}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448995}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448996}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322448996}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322448996}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322448996}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322448996}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322448997}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449026}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449026}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449026}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449026}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449027}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449027}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449027}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449028}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449028}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449030}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449057}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449057}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449057}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449057}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449058}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449058}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449058}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449058}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449058}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449059}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449088}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449088}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449088}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449088}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449089}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449089}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449089}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449089}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449089}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449090}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449119}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449119}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449119}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449119}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449121}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449121}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449121}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449121}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449121}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449122}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449168}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449168}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449168}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449168}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449170}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449170}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449170}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449170}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449170}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449171}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449197}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449197}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449197}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449197}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449198}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449198}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449198}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449198}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449198}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449199}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449228}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449228}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449228}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449228}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449229}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449229}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449229}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449229}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449229}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449230}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449260}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449260}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449260}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449260}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449261}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449261}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449261}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449261}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449261}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449262}
+{"data":{"currentView":1,"key":259,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449802}
+{"data":{"action":5,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449802}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449802}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449802}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449805}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322449805}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322449805}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322449805}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322449805}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322449806}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322450162}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322450162}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322450162}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322450162}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322450164}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322450164}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322450164}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322450164}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322450164}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322450165}
+{"data":{"currentView":1,"key":260,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322450307}
+{"data":{"action":4,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322450307}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322450307}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322450307}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322450308}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322450308}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322450308}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322450308}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322450308}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322450309}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322450403}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322450403}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322450403}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322450403}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322450404}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322450404}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322450404}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322450404}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322450405}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322450406}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322450687}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322450687}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322450687}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322450687}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322450688}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322450688}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322450688}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322450688}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322450688}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322450689}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322450717}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322450717}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322450717}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322450717}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322450718}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322450718}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322450718}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322450718}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322450718}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322450719}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322450752}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322450752}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322450752}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322450752}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322450753}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322450753}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322450753}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322450754}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322450754}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322450755}
+{"data":{"currentView":1,"key":260,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451283}
+{"data":{"action":4,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451283}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451283}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451283}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451284}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451284}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451284}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451284}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451284}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451286}
+{"data":{"currentView":1,"key":260,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451537}
+{"data":{"action":4,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451537}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451537}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451537}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451540}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451540}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451540}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451540}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451540}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451541}
+{"data":{"currentView":1,"key":260,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451568}
+{"data":{"action":4,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451568}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451568}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451568}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451570}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451570}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451570}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451570}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451570}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451571}
+{"data":{"currentView":1,"key":260,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451599}
+{"data":{"action":4,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451599}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451599}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451599}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451600}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451600}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451600}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451600}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451600}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451601}
+{"data":{"currentView":1,"key":260,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451646}
+{"data":{"action":4,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451646}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451647}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451647}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451649}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451649}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451649}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451649}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451649}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451651}
+{"data":{"currentView":1,"key":260,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451677}
+{"data":{"action":4,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451677}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451677}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451678}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451679}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451679}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451679}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451680}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451680}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451681}
+{"data":{"currentView":1,"key":260,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451709}
+{"data":{"action":4,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451709}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451709}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451709}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451711}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451711}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451711}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451711}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451711}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451712}
+{"data":{"currentView":1,"key":260,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451738}
+{"data":{"action":4,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451739}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451739}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451739}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451740}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451740}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451740}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451740}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451740}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451742}
+{"data":{"currentView":1,"key":260,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451770}
+{"data":{"action":4,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451770}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451770}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451770}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451771}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451771}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451772}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451772}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451772}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451773}
+{"data":{"currentView":1,"key":260,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451802}
+{"data":{"action":4,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451802}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451802}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451802}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451803}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451803}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451804}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451804}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451804}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451805}
+{"data":{"currentView":1,"key":260,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451830}
+{"data":{"action":4,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451830}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451830}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451830}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451831}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451831}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451831}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451831}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451831}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451832}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451962}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451962}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451962}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451962}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451964}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322451964}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322451964}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322451964}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322451964}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322451966}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322452187}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322452187}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322452187}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322452187}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322452188}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322452188}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322452188}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322452188}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322452188}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322452189}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322452346}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322452346}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322452346}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322452346}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322452348}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322452348}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322452348}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322452348}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322452348}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322452350}
+{"data":{"currentView":1,"key":257,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322452531}
+{"data":{"action":2,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322452531}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322452531}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322452531}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322452532}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322452532}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322452532}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322452533}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322452533}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322452534}
+{"data":{"currentView":1,"key":260,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322452787}
+{"data":{"action":4,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322452787}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322452787}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322452787}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322452788}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322452788}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322452788}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322452789}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322452789}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322452790}
+{"data":{"currentView":1,"key":258,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322453115}
+{"data":{"action":3,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322453115}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322453115}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322453115}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322453117}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322453117}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322453117}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322453117}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322453117}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322453119}
+{"data":{"currentView":1,"key":260,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322453315}
+{"data":{"action":4,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322453315}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322453315}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322453315}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322453316}
+{"data":{"currentView":1,"key":64,"rune":"\u0000"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322453316}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322453316}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322453316}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322453316}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322453318}
+{"data":{"currentView":1,"key":256,"rune":"i"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322454899}
+{"data":{"fromView":1},"hypothesisId":"A","location":"handler.go:handleGameInput","message":"Setting view to InventoryView","sessionId":"debug-session","timestamp":1768322454899}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322454899}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322454899}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322454901}
+{"data":{"currentView":2,"key":256,"rune":"i"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322454901}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322454901}
+{"data":{"key":256,"rune":"i"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322454901}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322454901}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322454901}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322454902}
+{"data":{"currentView":2,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322458243}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322458243}
+{"data":{"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322458243}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322458243}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322458243}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322458245}
+{"data":{"currentView":2,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322458245}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322458245}
+{"data":{"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322458245}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322458245}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322458246}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322458247}
+{"data":{"currentView":2,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322459530}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322459530}
+{"data":{"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322459530}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322459530}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322459530}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322459533}
+{"data":{"currentView":2,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322459533}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322459533}
+{"data":{"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322459533}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322459533}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322459533}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322459535}
+{"data":{"currentView":2,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322462051}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322462051}
+{"data":{"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322462051}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322462051}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322462051}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322462053}
+{"data":{"currentView":2,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322462053}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322462053}
+{"data":{"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322462053}
+{"data":{"action":0,"currentView":2},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322462053}
+{"data":{"currentView":2},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322462053}
+{"data":{"currentView":2},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322462055}
+{"data":{"currentView":2,"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322462498}
+{"data":{"currentView":2},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Routing to handleInventoryInput","sessionId":"debug-session","timestamp":1768322462498}
+{"data":{"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Processing inventory input","sessionId":"debug-session","timestamp":1768322462498}
+{"data":{"rune":"q"},"hypothesisId":"A","location":"handler.go:handleInventoryInput","message":"Q pressed - closing inventory","sessionId":"debug-session","timestamp":1768322462498}
+{"data":{"action":20,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322462498}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322462498}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322462498}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322462502}
+{"data":{"currentView":1,"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322462502}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322462502}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322462502}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322462502}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322462504}
+{"data":{"currentView":1,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322462963}
+{"data":{"action":9,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322462963}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322462963}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322462963}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322462965}
+{"data":{"currentView":1,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322462965}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322462965}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322462965}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322462965}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322462967}
+{"data":{"currentView":1,"key":256,"rune":"1"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322465747}
+{"data":{"action":20,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322465747}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322465747}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322465747}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322465749}
+{"data":{"currentView":1,"key":256,"rune":"1"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322465749}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322465749}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322465749}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322465749}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322465751}
+{"data":{"currentView":1,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322466506}
+{"data":{"action":9,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322466506}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322466506}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322466506}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322466508}
+{"data":{"currentView":1,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322466508}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322466508}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322466508}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322466508}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322466510}
+{"data":{"currentView":1,"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322468162}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322468162}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322468162}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322468162}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322468164}
+{"data":{"currentView":1,"key":256,"rune":"q"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322468164}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322468164}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322468164}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322468164}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322468165}
+{"data":{"currentView":1,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322468619}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322468619}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322468619}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322468619}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322468621}
+{"data":{"currentView":1,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322468621}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322468621}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322468621}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322468621}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322468622}
+{"data":{"currentView":1,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322469115}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322469115}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322469115}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322469115}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322469119}
+{"data":{"currentView":1,"key":256,"rune":"e"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322469119}
+{"data":{"action":0,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322469119}
+{"data":{},"hypothesisId":"B","location":"main.go:process_turn","message":"Processing turn (view is GameView)","sessionId":"debug-session","timestamp":1768322469119}
+{"data":{"currentView":1},"hypothesisId":"B","location":"main.go:loop_start","message":"Loop iteration start","sessionId":"debug-session","timestamp":1768322469119}
+{"data":{"currentView":1},"hypothesisId":"C","location":"main.go:after_render","message":"After render and show","sessionId":"debug-session","timestamp":1768322469120}
+{"data":{"currentView":1,"key":67,"rune":"c"},"hypothesisId":"A","location":"handler.go:handleKeyEvent","message":"Key event received","sessionId":"debug-session","timestamp":1768322473507}
+{"data":{"action":1,"currentView":1},"hypothesisId":"A","location":"main.go:after_input","message":"After input handling","sessionId":"debug-session","timestamp":1768322473507}
