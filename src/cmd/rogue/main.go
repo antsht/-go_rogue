@@ -5,6 +5,7 @@ import (
 	"os"
 
 	"github.com/user/go-rogue/internal/data"
+	"github.com/user/go-rogue/internal/domain/entities"
 	"github.com/user/go-rogue/internal/domain/game"
 	"github.com/user/go-rogue/internal/presentation/input"
 	"github.com/user/go-rogue/internal/presentation/renderer"
@@ -43,6 +44,18 @@ func runGameLoop(inputHandler *input.Handler, viewManager *views.Manager, gameEn
 	viewManager.SetView(views.MainMenu)
 
 	for {
+		// Check for game over or victory state and switch views accordingly
+		if viewManager.CurrentView() == views.GameView {
+			session := gameEngine.GetSession()
+			if session != nil {
+				if session.State == entities.StateGameOver {
+					viewManager.SetView(views.GameOverView)
+				} else if session.State == entities.StateVictory {
+					viewManager.SetView(views.VictoryView)
+				}
+			}
+		}
+
 		// Render current view
 		viewManager.Render()
 		screen.Show()

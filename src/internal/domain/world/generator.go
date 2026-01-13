@@ -10,7 +10,7 @@ const (
 	MinRoomWidth  = 6
 	MaxRoomWidth  = 12
 	MinRoomHeight = 4
-	MaxRoomHeight = 8
+	MaxRoomHeight = 5 // Capped to fit within section height (7) with margins
 )
 
 // Generator handles procedural level generation
@@ -87,22 +87,36 @@ func (g *Generator) generateRoom(id, gridX, gridY int) *entities.Room {
 	sectionX := gridX * entities.SectionWidth
 	sectionY := gridY * entities.SectionHeight
 
+	// Minimum margin from section edges on each side
+	// Adjacent rooms each have 1 margin, so total gap between rooms = 2 tiles
+	const roomMargin = 1
+
 	// Random room size
 	width := MinRoomWidth + g.rng.Intn(MaxRoomWidth-MinRoomWidth+1)
 	height := MinRoomHeight + g.rng.Intn(MaxRoomHeight-MinRoomHeight+1)
 
-	// Random position within section (with padding)
-	maxX := entities.SectionWidth - width - 2
-	maxY := entities.SectionHeight - height - 2
-	if maxX < 1 {
-		maxX = 1
+	// Ensure room fits within section with margins on all sides
+	maxRoomWidth := entities.SectionWidth - 2*roomMargin
+	maxRoomHeight := entities.SectionHeight - 2*roomMargin
+	if width > maxRoomWidth {
+		width = maxRoomWidth
 	}
-	if maxY < 1 {
-		maxY = 1
+	if height > maxRoomHeight {
+		height = maxRoomHeight
 	}
 
-	x := sectionX + 1 + g.rng.Intn(maxX)
-	y := sectionY + 1 + g.rng.Intn(maxY)
+	// Random position within section (with margin on all sides)
+	maxX := entities.SectionWidth - width - 2*roomMargin
+	maxY := entities.SectionHeight - height - 2*roomMargin
+	if maxX < 0 {
+		maxX = 0
+	}
+	if maxY < 0 {
+		maxY = 0
+	}
+
+	x := sectionX + roomMargin + g.rng.Intn(maxX+1)
+	y := sectionY + roomMargin + g.rng.Intn(maxY+1)
 
 	return entities.NewRoom(id, x, y, width, height, gridX, gridY)
 }
