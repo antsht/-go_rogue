@@ -72,10 +72,10 @@ func (v *GameViewRender) Render() {
 func (v *GameViewRender) renderItemSelection(session *entities.Session) {
 	width, _ := v.screen.Size()
 
-	// Draw selection box
-	boxX := width - 30
+	// Draw selection box (wider to fit stats)
+	boxWidth := 35
+	boxX := width - boxWidth - 2
 	boxY := 1
-	boxWidth := 28
 	boxHeight := 12
 
 	// Draw background
@@ -116,7 +116,7 @@ func (v *GameViewRender) renderItemSelection(session *entities.Session) {
 		v.screen.DrawString(boxX+2, boxY+3, "[0] Unequip", tcell.ColorWhite, tcell.ColorDarkGray)
 	}
 
-	// List items
+	// List items with stats
 	startY := boxY + 4
 	if session.SelectingItemType != entities.ItemTypeWeapon {
 		startY = boxY + 3
@@ -126,7 +126,7 @@ func (v *GameViewRender) renderItemSelection(session *entities.Session) {
 		if i >= 9 {
 			break
 		}
-		line := "[" + string(rune('1'+i)) + "] " + item.Name
+		line := "[" + string(rune('1'+i)) + "] " + item.Name + item.GetStatsString()
 		v.screen.DrawString(boxX+2, startY+i, line, tcell.ColorWhite, tcell.ColorDarkGray)
 	}
 

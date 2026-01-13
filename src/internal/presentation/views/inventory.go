@@ -49,7 +49,7 @@ func (v *InventoryViewRender) Render() {
 	// Current weapon
 	weaponStr := "None (Fists)"
 	if char.Weapon != nil {
-		weaponStr = char.Weapon.Name + " (+" + itoa(char.Weapon.Strength) + ")"
+		weaponStr = char.Weapon.Name + " (+" + itoa(char.Weapon.Strength) + " ATK)"
 	}
 	v.screen.DrawString(2, statsY+8, "Weapon:    "+weaponStr, tcell.ColorWhite, tcell.ColorBlack)
 
@@ -58,7 +58,7 @@ func (v *InventoryViewRender) Render() {
 
 	// Draw backpack sections
 	sectionX := 30
-	sectionWidth := 20
+	sectionWidth := 25
 
 	// Weapons section
 	v.renderItemSection(sectionX, 3, "WEAPONS [h]", backpack.GetWeapons(), sectionWidth)
@@ -91,7 +91,7 @@ func (v *InventoryViewRender) renderItemSection(x, y int, title string, items []
 		if i >= 9 {
 			break
 		}
-		line := "[" + string(rune('1'+i)) + "] " + item.Name
+		line := "[" + string(rune('1'+i)) + "] " + item.Name + item.GetStatsString()
 		if len(line) > width {
 			line = line[:width-3] + "..."
 		}

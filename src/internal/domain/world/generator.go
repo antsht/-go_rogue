@@ -479,17 +479,22 @@ func (g *Generator) generateItem(levelNum int) *entities.Item {
 		} else if levelNum < 15 {
 			options := []entities.ItemSubtype{
 				entities.SubtypeSword,
+				entities.SubtypeHammer,
 				entities.SubtypeMace,
 			}
 			subtype = options[g.rng.Intn(len(options))]
 		} else {
 			options := []entities.ItemSubtype{
 				entities.SubtypeSword,
+				entities.SubtypeHammer,
 				entities.SubtypeMace,
 				entities.SubtypeAxe,
 			}
 			subtype = options[g.rng.Intn(len(options))]
 		}
-		return entities.NewWeapon(subtype)
+		// Generate random attack bonus within weapon's range
+		attackRange := entities.GetWeaponAttackRange(subtype)
+		attackBonus := attackRange.Min + g.rng.Intn(attackRange.Max-attackRange.Min+1)
+		return entities.NewWeaponWithBonus(subtype, attackBonus)
 	}
 }
