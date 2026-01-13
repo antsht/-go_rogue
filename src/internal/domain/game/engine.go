@@ -63,6 +63,9 @@ func (e *Engine) NewGame() {
 	// Initial visibility update
 	e.updateVisibility()
 
+	// Save initial game state so player can continue from level 1
+	e.saveGame()
+
 	e.session.AddMessage("Welcome to the dungeon! Find the exit (%) to descend.")
 }
 
@@ -77,8 +80,14 @@ func (e *Engine) ContinueGame() bool {
 	e.levelSeeds = saveData.AllLevelSeeds
 	e.currentSeed = saveData.LevelSeed
 
-	// Regenerate the current level
+	// Store character position before regenerating level
+	charPos := e.session.Character.Position
+
+	// Regenerate the current level (same seed = same layout)
 	e.generateLevel(e.session.CurrentLevel)
+
+	// Restore character position
+	e.session.Character.Position = charPos
 
 	e.session.AddMessage("Welcome back, adventurer!")
 	e.updateVisibility()
@@ -227,14 +236,14 @@ func (e *Engine) descendLevel() {
 		return
 	}
 
-	// Save progress
-	e.saveGame()
-
 	// Generate next level
 	e.session.CurrentLevel++
 	e.generateLevel(e.session.CurrentLevel)
 	e.placeCharacterInStartRoom()
 	e.updateVisibility()
+
+	// Save progress AFTER generating new level and placing character
+	e.saveGame()
 
 	e.session.AddMessage("You descend to level " + itoa(e.session.CurrentLevel) + "...")
 }

@@ -50,6 +50,8 @@ type Handler struct {
 
 	// Debounce for cancel keys to prevent key repeat issues
 	lastCancelTime int64
+	// Debounce for toggle keys (I, h, j, k, e) to prevent key repeat issues
+	lastToggleTime int64
 }
 
 // NewHandler creates a new input handler
@@ -206,6 +208,9 @@ func (h *Handler) handleGameInput(ev *tcell.EventKey) Action {
 		return ActionNone
 	}
 
+	// Debounce for toggle keys
+	now := time.Now().UnixMilli()
+
 	// Movement keys (WASD)
 	switch ev.Rune() {
 	case 'w', 'W':
@@ -221,24 +226,39 @@ func (h *Handler) handleGameInput(ev *tcell.EventKey) Action {
 		h.gameEngine.MovePlayer(entities.DirRight)
 		return ActionMoveRight
 
-	// Item usage keys
+	// Item usage keys (with debounce for toggle support)
 	case 'h', 'H':
-		h.gameEngine.StartItemSelection(entities.ItemTypeWeapon)
-		return ActionUseWeapon
+		if now-h.lastToggleTime >= 100 {
+			h.lastToggleTime = now
+			h.gameEngine.StartItemSelection(entities.ItemTypeWeapon)
+			return ActionUseWeapon
+		}
 	case 'j', 'J':
-		h.gameEngine.StartItemSelection(entities.ItemTypeFood)
-		return ActionUseFood
+		if now-h.lastToggleTime >= 100 {
+			h.lastToggleTime = now
+			h.gameEngine.StartItemSelection(entities.ItemTypeFood)
+			return ActionUseFood
+		}
 	case 'k', 'K':
-		h.gameEngine.StartItemSelection(entities.ItemTypeElixir)
-		return ActionUseElixir
+		if now-h.lastToggleTime >= 100 {
+			h.lastToggleTime = now
+			h.gameEngine.StartItemSelection(entities.ItemTypeElixir)
+			return ActionUseElixir
+		}
 	case 'e', 'E':
-		h.gameEngine.StartItemSelection(entities.ItemTypeScroll)
-		return ActionUseScroll
+		if now-h.lastToggleTime >= 100 {
+			h.lastToggleTime = now
+			h.gameEngine.StartItemSelection(entities.ItemTypeScroll)
+			return ActionUseScroll
+		}
 
-	// Inventory
+	// Inventory (with debounce for toggle support)
 	case 'i', 'I':
-		h.viewManager.SetView(views.InventoryView)
-		return ActionNone
+		if now-h.lastToggleTime >= 100 {
+			h.lastToggleTime = now
+			h.viewManager.SetView(views.InventoryView)
+			return ActionNone
+		}
 	}
 
 	// Arrow key movement
@@ -269,6 +289,54 @@ func (h *Handler) handleItemSelection(ev *tcell.EventKey) Action {
 		ev.Rune() == 'x' || ev.Rune() == 'X' {
 		h.gameEngine.CancelItemSelection()
 		return ActionCancel
+	}
+
+	// Toggle off if pressing the same key that opened this selection (with debounce)
+	now := time.Now().UnixMilli()
+	if now-h.lastToggleTime >= 100 {
+		switch ev.Rune() {
+		case 'h', 'H':
+			if session.SelectingItemType == entities.ItemTypeWeapon {
+				h.lastToggleTime = now
+				h.gameEngine.CancelItemSelection()
+				return ActionCancel
+			}
+			// Switch to different item type
+			h.lastToggleTime = now
+			h.gameEngine.CancelItemSelection()
+			h.gameEngine.StartItemSelection(entities.ItemTypeWeapon)
+			return ActionUseWeapon
+		case 'j', 'J':
+			if session.SelectingItemType == entities.ItemTypeFood {
+				h.lastToggleTime = now
+				h.gameEngine.CancelItemSelection()
+				return ActionCancel
+			}
+			h.lastToggleTime = now
+			h.gameEngine.CancelItemSelection()
+			h.gameEngine.StartItemSelection(entities.ItemTypeFood)
+			return ActionUseFood
+		case 'k', 'K':
+			if session.SelectingItemType == entities.ItemTypeElixir {
+				h.lastToggleTime = now
+				h.gameEngine.CancelItemSelection()
+				return ActionCancel
+			}
+			h.lastToggleTime = now
+			h.gameEngine.CancelItemSelection()
+			h.gameEngine.StartItemSelection(entities.ItemTypeElixir)
+			return ActionUseElixir
+		case 'e', 'E':
+			if session.SelectingItemType == entities.ItemTypeScroll {
+				h.lastToggleTime = now
+				h.gameEngine.CancelItemSelection()
+				return ActionCancel
+			}
+			h.lastToggleTime = now
+			h.gameEngine.CancelItemSelection()
+			h.gameEngine.StartItemSelection(entities.ItemTypeScroll)
+			return ActionUseScroll
+		}
 	}
 
 	// Number key selection
@@ -318,11 +386,52 @@ func (h *Handler) handleInventoryInput(ev *tcell.EventKey) Action {
 		return ActionCancel
 	}
 
+	// Debounce toggle keys to prevent key repeat issues
+	now := time.Now().UnixMilli()
+
 	switch ev.Rune() {
-	// Use Q to close inventory (not 'I' - key repeat causes immediate close)
+	// Use Q to close inventory
 	case 'q', 'Q':
 		h.viewManager.SetView(views.GameView)
 		return ActionCancel
+
+	// Toggle inventory with I (with debounce)
+	case 'i', 'I':
+		if now-h.lastToggleTime >= 100 {
+			h.lastToggleTime = now
+			h.viewManager.SetView(views.GameView)
+			return ActionCancel
+		}
+
+	// Open item menus from inventory (with debounce)
+	case 'h', 'H':
+		if now-h.lastToggleTime >= 100 {
+			h.lastToggleTime = now
+			h.viewManager.SetView(views.GameView)
+			h.gameEngine.StartItemSelection(entities.ItemTypeWeapon)
+			return ActionUseWeapon
+		}
+	case 'j', 'J':
+		if now-h.lastToggleTime >= 100 {
+			h.lastToggleTime = now
+			h.viewManager.SetView(views.GameView)
+			h.gameEngine.StartItemSelection(entities.ItemTypeFood)
+			return ActionUseFood
+		}
+	case 'k', 'K':
+		if now-h.lastToggleTime >= 100 {
+			h.lastToggleTime = now
+			h.viewManager.SetView(views.GameView)
+			h.gameEngine.StartItemSelection(entities.ItemTypeElixir)
+			return ActionUseElixir
+		}
+	case 'e', 'E':
+		if now-h.lastToggleTime >= 100 {
+			h.lastToggleTime = now
+			h.viewManager.SetView(views.GameView)
+			h.gameEngine.StartItemSelection(entities.ItemTypeScroll)
+			return ActionUseScroll
+		}
 	}
 
 	return ActionNone

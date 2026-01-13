@@ -71,7 +71,7 @@ func (v *InventoryViewRender) Render() {
 
 	// Instructions
 	v.screen.DrawString(2, height-3, "Press [H/J/K/E] to use items", tcell.ColorGray, tcell.ColorBlack)
-	v.screen.DrawString(2, height-2, "Press [Q] or [Backspace] to close", tcell.ColorGray, tcell.ColorBlack)
+	v.screen.DrawString(2, height-2, "Press [I], [Q] or [Backspace] to close", tcell.ColorGray, tcell.ColorBlack)
 }
 
 // renderItemSection renders a section of items
