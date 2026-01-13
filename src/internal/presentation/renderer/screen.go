@@ -237,10 +237,11 @@ func (s *Screen) DrawStatusBar(session *entities.Session) {
 	y := entities.MapHeight
 	char := session.Character
 
-	// Clear status area
+	// Clear status area (3 lines: stats + 2 message lines)
 	for x := 0; x < s.width; x++ {
 		s.SetCell(x, y, ' ', tcell.ColorWhite, tcell.ColorBlack)
 		s.SetCell(x, y+1, ' ', tcell.ColorWhite, tcell.ColorBlack)
+		s.SetCell(x, y+2, ' ', tcell.ColorWhite, tcell.ColorBlack)
 	}
 
 	// Format: Level:X  Hits:XX(XX)  Str:XX(XX)  Gold:XXX  Armor:X  Exp:X/XX
@@ -297,10 +298,17 @@ func (s *Screen) DrawStatusBar(session *entities.Session) {
 	expStr := itoa(char.Level) + "/" + itoa(char.Experience)
 	s.DrawString(x, y, expStr, tcell.ColorPurple, tcell.ColorBlack)
 
-	// Draw messages on second status line
-	if len(session.Messages) > 0 {
-		msg := session.Messages[len(session.Messages)-1]
-		s.DrawString(0, y+1, msg, tcell.ColorWhite, tcell.ColorBlack)
+	// Draw last two messages on status lines
+	msgCount := len(session.Messages)
+	if msgCount > 0 {
+		// Show second-to-last message on first line (if exists)
+		if msgCount > 1 {
+			msg := session.Messages[msgCount-2]
+			s.DrawString(0, y+1, msg, tcell.ColorGray, tcell.ColorBlack)
+		}
+		// Show last message on second line
+		msg := session.Messages[msgCount-1]
+		s.DrawString(0, y+2, msg, tcell.ColorWhite, tcell.ColorBlack)
 	}
 
 	// Ignore unused variable

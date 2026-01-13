@@ -44,7 +44,7 @@ func (c *Combat) PlayerAttack(session *entities.Session, enemy *entities.Enemy) 
 	char.Stats.HitsDealt++
 
 	if enemy.IsAlive() {
-		session.AddMessage("You hit the " + enemy.Name + " for " + itoa(damage) + " damage!")
+		session.AddMessage("You hit the " + enemy.Name + " for " + itoa(damage) + " damage! (HP: " + itoa(enemy.Health) + "/" + itoa(enemy.MaxHealth) + ")")
 	} else {
 		// Enemy defeated
 		treasure := enemy.GetTreasureValue()
