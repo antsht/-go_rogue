@@ -222,41 +222,41 @@ func (d *DoorKeySystem) getAccessibleRoomsWithKeys(level *entities.Level, startR
 
 // verifySolvable verifies the level can be completed (no softlocks)
 func (d *DoorKeySystem) verifySolvable(level *entities.Level) {
-	// Collect all keys available from start
 	startRoom := level.GetStartRoom()
 	if startRoom == nil {
 		return
 	}
 
-	// Simulate collecting keys and unlocking doors
-	collectedKeys := make(map[entities.ItemSubtype]bool)
-	visitedRooms := make(map[int]bool)
-
-	d.collectKeysAndUnlock(level, startRoom.ID, collectedKeys, visitedRooms)
-
-	// Check if exit is reachable
 	exitRoom := level.GetExitRoom()
 	if exitRoom == nil {
 		return
 	}
 
+	// Simulate without modifying actual door state
+	collectedKeys := make(map[entities.ItemSubtype]bool)
+	visitedRooms := make(map[int]bool)
+	unlockedInSim := make(map[entities.ItemSubtype]bool)
+
+	d.simulateKeyCollection(level, startRoom.ID, collectedKeys, visitedRooms, unlockedInSim)
+
 	if !visitedRooms[exitRoom.ID] {
-		// Exit not reachable - unlock all doors as fallback
+		// Exit not reachable - unlock all doors and remove all keys as fallback
 		for _, corridor := range level.Corridors {
 			for i := range corridor.Doors {
 				corridor.Doors[i].Locked = false
-				// Update tile
 				tile := level.GetTile(corridor.Doors[i].Position)
 				if tile != nil {
 					tile.DoorLocked = false
 				}
 			}
 		}
+		// Remove all keys since all doors are now unlocked
+		d.removeAllKeys(level)
 	}
 }
 
-// collectKeysAndUnlock simulates key collection and door unlocking
-func (d *DoorKeySystem) collectKeysAndUnlock(level *entities.Level, roomID int, keys map[entities.ItemSubtype]bool, visited map[int]bool) {
+// simulateKeyCollection simulates key collection without modifying door states
+func (d *DoorKeySystem) simulateKeyCollection(level *entities.Level, roomID int, keys map[entities.ItemSubtype]bool, visited map[int]bool, unlocked map[entities.ItemSubtype]bool) {
 	if visited[roomID] {
 		return
 	}
@@ -280,18 +280,13 @@ func (d *DoorKeySystem) collectKeysAndUnlock(level *entities.Level, roomID int, 
 			continue
 		}
 
-		// Check if we can pass through
+		// Check if we can pass through (simulate having keys)
 		canPass := true
-		for i := range corridor.Doors {
-			door := &corridor.Doors[i]
-			if door.Locked {
+		for _, door := range corridor.Doors {
+			if door.Locked && !unlocked[door.KeyType] {
 				if keys[door.KeyType] {
-					// Unlock the door
-					door.Locked = false
-					tile := level.GetTile(door.Position)
-					if tile != nil {
-						tile.DoorLocked = false
-					}
+					// Mark as unlocked in simulation (don't modify actual door)
+					unlocked[door.KeyType] = true
 				} else {
 					canPass = false
 				}
@@ -303,7 +298,20 @@ func (d *DoorKeySystem) collectKeysAndUnlock(level *entities.Level, roomID int, 
 			if nextRoom == roomID {
 				nextRoom = corridor.FromRoom
 			}
-			d.collectKeysAndUnlock(level, nextRoom, keys, visited)
+			d.simulateKeyCollection(level, nextRoom, keys, visited, unlocked)
 		}
+	}
+}
+
+// removeAllKeys removes all keys from all rooms
+func (d *DoorKeySystem) removeAllKeys(level *entities.Level) {
+	for _, room := range level.Rooms {
+		newItems := make([]*entities.Item, 0)
+		for _, item := range room.Items {
+			if item.Type != entities.ItemTypeKey {
+				newItems = append(newItems, item)
+			}
+		}
+		room.Items = newItems
 	}
 }
