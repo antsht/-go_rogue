@@ -18,10 +18,10 @@ const (
 	ActionMoveDown
 	ActionMoveLeft
 	ActionMoveRight
-	ActionUseWeapon    // h
-	ActionUseFood      // j
-	ActionUseElixir    // k
-	ActionUseScroll    // e
+	ActionUseWeapon // h
+	ActionUseFood   // j
+	ActionUseElixir // k
+	ActionUseScroll // e
 	ActionSelect1
 	ActionSelect2
 	ActionSelect3
@@ -31,7 +31,7 @@ const (
 	ActionSelect7
 	ActionSelect8
 	ActionSelect9
-	ActionSelect0      // Unequip weapon
+	ActionSelect0 // Unequip weapon
 	ActionCancel
 	ActionConfirm
 	ActionNewGame
@@ -267,7 +267,8 @@ func (h *Handler) handleInventoryInput(ev *tcell.EventKey) Action {
 	}
 
 	switch ev.Rune() {
-	case 'i', 'I', 'q', 'Q':
+	// Use ESC or Q to close inventory (not 'I' - key repeat causes immediate close)
+	case 'q', 'Q':
 		h.viewManager.SetView(views.GameView)
 		return ActionCancel
 	}

@@ -56,7 +56,7 @@ func (v *LeaderboardViewRender) Render() {
 		y := headerY + 2 + i
 
 		// Rank
-		rank := itoa(i + 1) + "."
+		rank := itoa(i+1) + "."
 		v.screen.DrawString(3, y, rank, tcell.ColorWhite, tcell.ColorBlack)
 
 		// Gold

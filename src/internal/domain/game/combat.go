@@ -114,12 +114,12 @@ func (c *Combat) calculateHitChance(attackerDex, defenderDex int) float64 {
 	// Base 70% hit chance, modified by dex difference
 	baseChance := 0.70
 	dexDiff := float64(attackerDex - defenderDex)
-	
+
 	// Each point of dex difference adjusts by 3%
 	modifier := dexDiff * 0.03
-	
+
 	chance := baseChance + modifier
-	
+
 	// Clamp between 10% and 95%
 	if chance < 0.10 {
 		chance = 0.10
@@ -127,7 +127,7 @@ func (c *Combat) calculateHitChance(attackerDex, defenderDex int) float64 {
 	if chance > 0.95 {
 		chance = 0.95
 	}
-	
+
 	return chance
 }
 
@@ -136,10 +136,10 @@ func (c *Combat) calculateDamage(baseDamage int) int {
 	// Add ±20% variance
 	variance := float64(baseDamage) * 0.2
 	damage := float64(baseDamage) + (rand.Float64()*2-1)*variance
-	
+
 	if damage < 1 {
 		damage = 1
 	}
-	
+
 	return int(damage)
 }

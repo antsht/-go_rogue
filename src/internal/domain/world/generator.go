@@ -15,9 +15,9 @@ const (
 
 // Generator handles procedural level generation
 type Generator struct {
-	rng          *rand.Rand
-	doorSystem   *DoorKeySystem
-	mimicPlacer  *MimicPlacer
+	rng         *rand.Rand
+	doorSystem  *DoorKeySystem
+	mimicPlacer *MimicPlacer
 }
 
 // NewGenerator creates a new level generator
@@ -362,7 +362,7 @@ func (g *Generator) placeEnemies(level *entities.Level, levelNum int, difficulty
 
 			// Random position in room
 			pos := room.GetRandomFloorPosition(entities.NewRNG(g.rng.Int63()))
-			
+
 			// Make sure not on exit
 			if pos.Equals(level.ExitPos) {
 				continue

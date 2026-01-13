@@ -17,25 +17,25 @@ const (
 
 // Session represents a game session
 type Session struct {
-	ID            string          `json:"id"`
-	Character     *Character      `json:"character"`
-	CurrentLevel  int             `json:"current_level"`
-	Level         *Level          `json:"level"`
-	State         GameState       `json:"state"`
-	TurnCount     int             `json:"turn_count"`
-	StartTime     time.Time       `json:"start_time"`
-	LastSaveTime  time.Time       `json:"last_save_time"`
-	Messages      []string        `json:"messages"`
-	MaxMessages   int             `json:"-"`
+	ID           string     `json:"id"`
+	Character    *Character `json:"character"`
+	CurrentLevel int        `json:"current_level"`
+	Level        *Level     `json:"level"`
+	State        GameState  `json:"state"`
+	TurnCount    int        `json:"turn_count"`
+	StartTime    time.Time  `json:"start_time"`
+	LastSaveTime time.Time  `json:"last_save_time"`
+	Messages     []string   `json:"messages"`
+	MaxMessages  int        `json:"-"`
 
 	// For item selection UI
-	SelectingItem     bool        `json:"selecting_item"`
-	SelectingItemType ItemType    `json:"selecting_item_type"`
+	SelectingItem     bool     `json:"selecting_item"`
+	SelectingItemType ItemType `json:"selecting_item_type"`
 
 	// Dynamic difficulty (bonus feature)
-	DifficultyModifier float64    `json:"difficulty_modifier"`
-	RecentDeaths       int        `json:"recent_deaths"`
-	RecentEasyKills    int        `json:"recent_easy_kills"`
+	DifficultyModifier float64 `json:"difficulty_modifier"`
+	RecentDeaths       int     `json:"recent_deaths"`
+	RecentEasyKills    int     `json:"recent_easy_kills"`
 }
 
 // NewSession creates a new game session
@@ -134,9 +134,9 @@ type SessionResult struct {
 
 // SaveData represents all data needed to save/load a game
 type SaveData struct {
-	Session       *Session        `json:"session"`
-	LevelSeed     int64           `json:"level_seed"`
-	AllLevelSeeds []int64         `json:"all_level_seeds"`
+	Session       *Session `json:"session"`
+	LevelSeed     int64    `json:"level_seed"`
+	AllLevelSeeds []int64  `json:"all_level_seeds"`
 }
 
 // Leaderboard represents the game leaderboard

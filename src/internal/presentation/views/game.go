@@ -71,7 +71,7 @@ func (v *GameViewRender) Render() {
 // renderItemSelection draws the item selection overlay
 func (v *GameViewRender) renderItemSelection(session *entities.Session) {
 	width, _ := v.screen.Size()
-	
+
 	// Draw selection box
 	boxX := width - 30
 	boxY := 1

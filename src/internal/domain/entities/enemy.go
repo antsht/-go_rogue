@@ -16,23 +16,23 @@ const (
 
 // Enemy represents a hostile creature in the game
 type Enemy struct {
-	Type       EnemyType `json:"type"`
-	Name       string    `json:"name"`
-	Position   Position  `json:"position"`
-	Health     int       `json:"health"`
-	MaxHealth  int       `json:"max_health"`
-	Dexterity  int       `json:"dexterity"`
-	Strength   int       `json:"strength"`
-	Hostility  int       `json:"hostility"` // Detection range
-	Symbol     rune      `json:"symbol"`
-	Color      string    `json:"color"`
+	Type      EnemyType `json:"type"`
+	Name      string    `json:"name"`
+	Position  Position  `json:"position"`
+	Health    int       `json:"health"`
+	MaxHealth int       `json:"max_health"`
+	Dexterity int       `json:"dexterity"`
+	Strength  int       `json:"strength"`
+	Hostility int       `json:"hostility"` // Detection range
+	Symbol    rune      `json:"symbol"`
+	Color     string    `json:"color"`
 
 	// State tracking
-	IsAggro       bool `json:"is_aggro"`
-	IsVisible     bool `json:"is_visible"`
-	IsResting     bool `json:"is_resting"`      // Ogre resting after attack
-	FirstHitMissed bool `json:"first_hit_missed"` // Vampire mechanic
-	MoveDirection Direction `json:"move_direction"` // For Snake-Mage diagonal movement
+	IsAggro        bool      `json:"is_aggro"`
+	IsVisible      bool      `json:"is_visible"`
+	IsResting      bool      `json:"is_resting"`       // Ogre resting after attack
+	FirstHitMissed bool      `json:"first_hit_missed"` // Vampire mechanic
+	MoveDirection  Direction `json:"move_direction"`   // For Snake-Mage diagonal movement
 
 	// For Mimic - what item it mimics
 	MimickedItem *Item `json:"mimicked_item"`
@@ -126,16 +126,16 @@ func NewSnakeMage(level int) *Enemy {
 // NewMimic creates a mimic enemy (bonus task)
 func NewMimic(level int) *Enemy {
 	return &Enemy{
-		Type:      EnemyMimic,
-		Name:      "Mimic",
-		Health:    18 + level*2,
-		MaxHealth: 18 + level*2,
-		Dexterity: 12 + level,
-		Strength:  5 + level/2,
-		Hostility: 3,
-		Symbol:    '*', // Mimics treasure by default
-		Color:     "yellow",
-		IsVisible: true,
+		Type:       EnemyMimic,
+		Name:       "Mimic",
+		Health:     18 + level*2,
+		MaxHealth:  18 + level*2,
+		Dexterity:  12 + level,
+		Strength:   5 + level/2,
+		Hostility:  3,
+		Symbol:     '*', // Mimics treasure by default
+		Color:      "yellow",
+		IsVisible:  true,
 		IsRevealed: false,
 	}
 }

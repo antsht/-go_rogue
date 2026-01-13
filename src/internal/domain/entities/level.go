@@ -16,16 +16,16 @@ const (
 
 // Level represents a single dungeon level
 type Level struct {
-	Number      int          `json:"number"`
-	Rooms       []*Room      `json:"rooms"`
-	Corridors   []*Corridor  `json:"corridors"`
-	Tiles       [][]Tile     `json:"tiles"`
-	StartRoom   int          `json:"start_room"`
-	ExitRoom    int          `json:"exit_room"`
-	ExitPos     Position     `json:"exit_pos"`
+	Number    int         `json:"number"`
+	Rooms     []*Room     `json:"rooms"`
+	Corridors []*Corridor `json:"corridors"`
+	Tiles     [][]Tile    `json:"tiles"`
+	StartRoom int         `json:"start_room"`
+	ExitRoom  int         `json:"exit_room"`
+	ExitPos   Position    `json:"exit_pos"`
 
 	// For fog of war
-	PlayerRoom  *Room        `json:"-"` // Current room player is in
+	PlayerRoom *Room `json:"-"` // Current room player is in
 }
 
 // NewLevel creates a new empty level

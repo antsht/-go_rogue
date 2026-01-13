@@ -3,7 +3,7 @@ package entities
 // Corridor represents a passage between rooms
 type Corridor struct {
 	ID       int        `json:"id"`
-	Points   []Position `json:"points"`   // All positions that make up the corridor
+	Points   []Position `json:"points"`    // All positions that make up the corridor
 	FromRoom int        `json:"from_room"` // Room ID where corridor starts
 	ToRoom   int        `json:"to_room"`   // Room ID where corridor ends
 	Explored bool       `json:"explored"`

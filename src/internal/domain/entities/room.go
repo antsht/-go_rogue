@@ -21,26 +21,26 @@ type Tile struct {
 	Symbol   rune     `json:"symbol"`
 
 	// For doors (bonus feature)
-	DoorColor    string `json:"door_color,omitempty"`
-	DoorLocked   bool   `json:"door_locked,omitempty"`
-	DoorKeyType  ItemSubtype `json:"door_key_type,omitempty"`
+	DoorColor   string      `json:"door_color,omitempty"`
+	DoorLocked  bool        `json:"door_locked,omitempty"`
+	DoorKeyType ItemSubtype `json:"door_key_type,omitempty"`
 }
 
 // Room represents a room in the dungeon
 type Room struct {
-	ID         int       `json:"id"`
-	X          int       `json:"x"`      // Top-left X position
-	Y          int       `json:"y"`      // Top-left Y position
-	Width      int       `json:"width"`
-	Height     int       `json:"height"`
-	GridX      int       `json:"grid_x"` // Position in 3x3 grid (0-2)
-	GridY      int       `json:"grid_y"` // Position in 3x3 grid (0-2)
-	IsStart    bool      `json:"is_start"`
-	IsExit     bool      `json:"is_exit"`
-	Explored   bool      `json:"explored"`
-	Enemies    []*Enemy  `json:"enemies"`
-	Items      []*Item   `json:"items"`
-	Entrances  []Position `json:"entrances"` // Door/opening positions
+	ID        int        `json:"id"`
+	X         int        `json:"x"` // Top-left X position
+	Y         int        `json:"y"` // Top-left Y position
+	Width     int        `json:"width"`
+	Height    int        `json:"height"`
+	GridX     int        `json:"grid_x"` // Position in 3x3 grid (0-2)
+	GridY     int        `json:"grid_y"` // Position in 3x3 grid (0-2)
+	IsStart   bool       `json:"is_start"`
+	IsExit    bool       `json:"is_exit"`
+	Explored  bool       `json:"explored"`
+	Enemies   []*Enemy   `json:"enemies"`
+	Items     []*Item    `json:"items"`
+	Entrances []Position `json:"entrances"` // Door/opening positions
 }
 
 // NewRoom creates a new room at the specified position

@@ -16,8 +16,8 @@ type Character struct {
 	Armor         int       `json:"armor"`
 
 	// Status effects
-	Asleep       bool `json:"asleep"`
-	SleepTurns   int  `json:"sleep_turns"`
+	Asleep        bool     `json:"asleep"`
+	SleepTurns    int      `json:"sleep_turns"`
 	ActiveEffects []Effect `json:"active_effects"`
 
 	// Statistics
@@ -37,9 +37,9 @@ type CharacterStats struct {
 
 // Effect represents a temporary stat modification
 type Effect struct {
-	Type          EffectType `json:"type"`
-	Value         int        `json:"value"`
-	TurnsRemaining int       `json:"turns_remaining"`
+	Type           EffectType `json:"type"`
+	Value          int        `json:"value"`
+	TurnsRemaining int        `json:"turns_remaining"`
 }
 
 // EffectType represents different effect types
@@ -127,8 +127,8 @@ func (c *Character) GetEffectiveMaxHealth() int {
 // AddEffect adds a temporary effect to the character
 func (c *Character) AddEffect(effectType EffectType, value, turns int) {
 	c.ActiveEffects = append(c.ActiveEffects, Effect{
-		Type:          effectType,
-		Value:         value,
+		Type:           effectType,
+		Value:          value,
 		TurnsRemaining: turns,
 	})
 }

@@ -15,16 +15,16 @@ const (
 
 // Engine manages the game logic
 type Engine struct {
-	session      *entities.Session
-	dataManager  *data.Manager
-	worldGen     *world.Generator
-	combat       *Combat
-	ai           *AI
-	visibility   *Visibility
-	difficulty   *DifficultyManager
+	session     *entities.Session
+	dataManager *data.Manager
+	worldGen    *world.Generator
+	combat      *Combat
+	ai          *AI
+	visibility  *Visibility
+	difficulty  *DifficultyManager
 
-	levelSeeds   []int64
-	currentSeed  int64
+	levelSeeds  []int64
+	currentSeed int64
 }
 
 // NewEngine creates a new game engine
@@ -106,7 +106,7 @@ func (e *Engine) GetLeaderboard() *entities.Leaderboard {
 func (e *Engine) generateLevel(levelNum int) {
 	seed := e.levelSeeds[levelNum-1]
 	e.currentSeed = seed
-	
+
 	level := e.worldGen.Generate(levelNum, seed, e.difficulty.GetModifier())
 	e.session.Level = level
 	e.session.CurrentLevel = levelNum
