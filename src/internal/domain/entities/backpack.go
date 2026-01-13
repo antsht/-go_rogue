@@ -175,3 +175,8 @@ func (b *Backpack) WeaponCount() int {
 func (b *Backpack) KeyCount() int {
 	return len(b.Keys)
 }
+
+// ClearKeys removes all keys from the backpack (used when descending to next level)
+func (b *Backpack) ClearKeys() {
+	b.Keys = make([]*Item, 0, MaxItemsPerType)
+}

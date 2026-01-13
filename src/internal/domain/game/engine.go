@@ -160,10 +160,11 @@ func (e *Engine) MovePlayer(dir entities.Direction) bool {
 		// Check for locked door
 		tile := level.GetTile(newPos)
 		if tile != nil && tile.Type == entities.TileDoor && tile.DoorLocked {
+			doorColor := tile.DoorColor
 			if e.tryUnlockDoor(newPos, tile) {
-				e.session.AddMessage("You unlock the door!")
+				e.session.AddMessage("You unlock the " + doorColor + " door with the " + doorColor + " key!")
 			} else {
-				e.session.AddMessage("The door is locked. You need a " + tile.DoorColor + " key.")
+				e.session.AddMessage("The door is locked. You need a " + doorColor + " key.")
 			}
 		}
 		return false
@@ -234,6 +235,13 @@ func (e *Engine) descendLevel() {
 		// Victory!
 		e.victory()
 		return
+	}
+
+	// Clear all keys from inventory - keys are only valid for current level
+	keyCount := e.session.Character.Backpack.KeyCount()
+	e.session.Character.Backpack.ClearKeys()
+	if keyCount > 0 {
+		e.session.AddMessage("Your keys crumble to dust as you descend...")
 	}
 
 	// Generate next level

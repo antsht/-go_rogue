@@ -55,8 +55,8 @@ func (g *Generator) Generate(levelNum int, seed int64, difficultyMod float64) *e
 	// Place items (not in start room)
 	g.placeItems(level, levelNum, difficultyMod)
 
-	// Bonus Task 6: Add doors and keys (only on some levels)
-	if levelNum > 2 && g.rng.Float64() < 0.5 {
+	// Bonus Task 6: Add doors and keys (starting from level 2, always)
+	if levelNum >= 2 {
 		g.doorSystem.AddDoorsAndKeys(level, seed+1)
 	}
 

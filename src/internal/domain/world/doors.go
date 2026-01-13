@@ -29,86 +29,148 @@ var doorColors = []DoorColor{
 	{"yellow", entities.SubtypeYellowKey},
 }
 
+// doorKeyPair tracks a placed door and its corresponding key
+type doorKeyPair struct {
+	corridor *entities.Corridor
+	doorPos  entities.Position
+	color    DoorColor
+	keyRoom  *entities.Room
+	keyPos   entities.Position
+}
+
 // AddDoorsAndKeys adds doors and keys to a level
 func (d *DoorKeySystem) AddDoorsAndKeys(level *entities.Level, seed int64) {
 	d.rng = rand.New(rand.NewSource(seed))
 
-	// Select corridors to add doors to
-	numDoors := 1 + d.rng.Intn(3) // 1-3 doors per level
-
-	// Track which keys we need to place
-	keysNeeded := make([]DoorColor, 0)
-
-	// Add doors to random corridors
-	doorsAdded := 0
-	for _, corridor := range level.Corridors {
-		if doorsAdded >= numDoors {
-			break
-		}
-
-		// 40% chance to add a door to this corridor
-		if d.rng.Float64() < 0.4 && len(corridor.Points) > 2 {
-			// Place door in middle of corridor
-			midIdx := len(corridor.Points) / 2
-			doorPos := corridor.Points[midIdx]
-
-			// Select random color
-			color := doorColors[d.rng.Intn(len(doorColors))]
-
-			// Add door to corridor
-			corridor.AddDoor(doorPos, color.Name, color.KeyType)
-
-			// Update tile
-			tile := level.GetTile(doorPos)
-			if tile != nil {
-				tile.Type = entities.TileDoor
-				tile.DoorColor = color.Name
-				tile.DoorLocked = true
-				tile.DoorKeyType = color.KeyType
-				tile.Symbol = '+'
-			}
-
-			keysNeeded = append(keysNeeded, color)
-			doorsAdded++
-		}
-	}
-
-	// Place keys in accessible rooms
-	d.placeKeys(level, keysNeeded)
-
-	// Verify no softlocks
-	d.verifySolvable(level)
-}
-
-// placeKeys places keys in rooms that are accessible without the key
-func (d *DoorKeySystem) placeKeys(level *entities.Level, keysNeeded []DoorColor) {
-	// Simple placement: put keys in rooms near the start
 	startRoom := level.GetStartRoom()
 	if startRoom == nil {
 		return
 	}
 
-	// Get accessible rooms from start (BFS)
-	accessibleRooms := d.getAccessibleRooms(level, startRoom.ID)
+	// Target number of doors: 2-5 per level
+	targetDoors := 2 + d.rng.Intn(4)
 
-	for i, color := range keysNeeded {
-		// Find a room to place the key
-		// Prefer rooms that are accessible before the door
-		if len(accessibleRooms) > 0 {
-			roomIdx := i % len(accessibleRooms)
-			room := accessibleRooms[roomIdx]
+	// Shuffle corridors for random selection
+	corridors := make([]*entities.Corridor, len(level.Corridors))
+	copy(corridors, level.Corridors)
+	d.rng.Shuffle(len(corridors), func(i, j int) {
+		corridors[i], corridors[j] = corridors[j], corridors[i]
+	})
 
-			// Create and place key
-			key := entities.NewKey(color.KeyType)
-			pos := room.GetRandomFloorPosition(entities.NewRNG(d.rng.Int63()))
-			key.Position = pos
-			room.AddItem(key)
+	// Track placed doors and their keys
+	placedPairs := make([]doorKeyPair, 0)
+	// Track which key types are already used (to avoid duplicates)
+	usedColors := make(map[entities.ItemSubtype]bool)
+
+	// Try to place doors one by one, ensuring each has an accessible key
+	colorIdx := 0
+	for _, corridor := range corridors {
+		if len(placedPairs) >= targetDoors {
+			break
 		}
+
+		// Skip corridors that are too short
+		if len(corridor.Points) <= 2 {
+			continue
+		}
+
+		// 70% chance to try adding a door to this corridor
+		if d.rng.Float64() > 0.7 {
+			continue
+		}
+
+		// Find a color we haven't used yet (to ensure variety)
+		var selectedColor DoorColor
+		found := false
+		for attempts := 0; attempts < len(doorColors); attempts++ {
+			candidate := doorColors[colorIdx%len(doorColors)]
+			colorIdx++
+			if !usedColors[candidate.KeyType] {
+				selectedColor = candidate
+				found = true
+				break
+			}
+		}
+		if !found {
+			// All colors used, pick any
+			selectedColor = doorColors[d.rng.Intn(len(doorColors))]
+		}
+
+		// Determine door position (middle of corridor)
+		midIdx := len(corridor.Points) / 2
+		doorPos := corridor.Points[midIdx]
+
+		// CRITICAL: Find where we can place the key BEFORE committing to the door
+		// Simulate the level state with existing doors
+		simulatedKeys := make(map[entities.ItemSubtype]bool)
+		for _, pair := range placedPairs {
+			simulatedKeys[pair.color.KeyType] = true
+		}
+
+		// Get rooms accessible with current keys (before this new door)
+		accessibleRooms := d.getAccessibleRoomsWithKeys(level, startRoom.ID, simulatedKeys)
+		// Always include start room
+		accessibleRooms = append([]*entities.Room{startRoom}, accessibleRooms...)
+
+		// Remove duplicates
+		seen := make(map[int]bool)
+		uniqueRooms := make([]*entities.Room, 0)
+		for _, room := range accessibleRooms {
+			if !seen[room.ID] {
+				seen[room.ID] = true
+				uniqueRooms = append(uniqueRooms, room)
+			}
+		}
+		accessibleRooms = uniqueRooms
+
+		if len(accessibleRooms) == 0 {
+			continue // Can't place key, skip this door
+		}
+
+		// Choose a room for the key
+		keyRoom := accessibleRooms[d.rng.Intn(len(accessibleRooms))]
+		keyPos := keyRoom.GetRandomFloorPosition(entities.NewRNG(d.rng.Int63()))
+
+		// Ensure key doesn't overlap with exit
+		attempts := 0
+		for keyPos.Equals(level.ExitPos) && attempts < 10 {
+			keyPos = keyRoom.GetRandomFloorPosition(entities.NewRNG(d.rng.Int63()))
+			attempts++
+		}
+
+		// NOW commit: place the door
+		corridor.AddDoor(doorPos, selectedColor.Name, selectedColor.KeyType)
+		tile := level.GetTile(doorPos)
+		if tile != nil {
+			tile.Type = entities.TileDoor
+			tile.DoorColor = selectedColor.Name
+			tile.DoorLocked = true
+			tile.DoorKeyType = selectedColor.KeyType
+			tile.Symbol = '+'
+		}
+
+		// Place the key
+		key := entities.NewKey(selectedColor.KeyType)
+		key.Position = keyPos
+		keyRoom.AddItem(key)
+
+		// Track this pair
+		placedPairs = append(placedPairs, doorKeyPair{
+			corridor: corridor,
+			doorPos:  doorPos,
+			color:    selectedColor,
+			keyRoom:  keyRoom,
+			keyPos:   keyPos,
+		})
+		usedColors[selectedColor.KeyType] = true
 	}
+
+	// Final verification - ensure exit is reachable
+	d.verifySolvable(level)
 }
 
-// getAccessibleRooms returns rooms accessible from start without keys (BFS)
-func (d *DoorKeySystem) getAccessibleRooms(level *entities.Level, startRoomID int) []*entities.Room {
+// getAccessibleRoomsWithKeys returns rooms accessible from start with given keys (BFS)
+func (d *DoorKeySystem) getAccessibleRoomsWithKeys(level *entities.Level, startRoomID int, keys map[entities.ItemSubtype]bool) []*entities.Room {
 	visited := make(map[int]bool)
 	accessible := make([]*entities.Room, 0)
 	queue := []int{startRoomID}
@@ -127,19 +189,22 @@ func (d *DoorKeySystem) getAccessibleRooms(level *entities.Level, startRoomID in
 			accessible = append(accessible, room)
 		}
 
-		// Find connected rooms through unlocked corridors
+		// Find connected rooms through corridors (checking door access)
 		for _, corridor := range level.Corridors {
 			if corridor.FromRoom == roomID || corridor.ToRoom == roomID {
-				// Check if corridor is blocked by locked door
-				hasLockedDoor := false
+				// Check if corridor is blocked by locked door we can't open
+				canPass := true
 				for _, door := range corridor.Doors {
 					if door.Locked {
-						hasLockedDoor = true
-						break
+						// Check if we have the key
+						if keys == nil || !keys[door.KeyType] {
+							canPass = false
+							break
+						}
 					}
 				}
 
-				if !hasLockedDoor {
+				if canPass {
 					nextRoom := corridor.ToRoom
 					if nextRoom == roomID {
 						nextRoom = corridor.FromRoom

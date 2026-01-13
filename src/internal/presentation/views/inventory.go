@@ -53,6 +53,9 @@ func (v *InventoryViewRender) Render() {
 	}
 	v.screen.DrawString(2, statsY+8, "Weapon:    "+weaponStr, tcell.ColorWhite, tcell.ColorBlack)
 
+	// Draw keys section (keys are level-specific)
+	v.renderKeysSection(2, statsY+10, backpack.GetKeys())
+
 	// Draw backpack sections
 	sectionX := 30
 	sectionWidth := 20
@@ -93,6 +96,57 @@ func (v *InventoryViewRender) renderItemSection(x, y int, title string, items []
 			line = line[:width-3] + "..."
 		}
 		v.screen.DrawString(x, y+2+i, line, tcell.ColorWhite, tcell.ColorBlack)
+	}
+}
+
+// renderKeysSection renders the keys section with colored key symbols
+func (v *InventoryViewRender) renderKeysSection(x, y int, keys []*entities.Item) {
+	v.screen.DrawString(x, y, "KEYS (this level)", tcell.ColorOrange, tcell.ColorBlack)
+	v.screen.DrawString(x, y+1, "────────────────", tcell.ColorOrange, tcell.ColorBlack)
+
+	if len(keys) == 0 {
+		v.screen.DrawString(x, y+2, "(none)", tcell.ColorDarkGray, tcell.ColorBlack)
+		return
+	}
+
+	// Display keys in a row with their colors
+	keyX := x
+	for i, key := range keys {
+		if i > 0 {
+			keyX += 2 // Space between keys
+		}
+
+		// Get the color for this key
+		keyColor := v.getKeyColor(key.Color)
+
+		// Draw the key symbol
+		v.screen.SetCell(keyX, y+2, 'k', keyColor, tcell.ColorBlack)
+		keyX++
+	}
+
+	// Also show key names below
+	for i, key := range keys {
+		if i >= 4 {
+			break // Max 4 keys displayed
+		}
+		keyColor := v.getKeyColor(key.Color)
+		v.screen.DrawString(x, y+3+i, "• "+key.Name, keyColor, tcell.ColorBlack)
+	}
+}
+
+// getKeyColor returns the tcell color for a key color name
+func (v *InventoryViewRender) getKeyColor(colorName string) tcell.Color {
+	switch colorName {
+	case "red":
+		return tcell.ColorRed
+	case "blue":
+		return tcell.ColorBlue
+	case "green":
+		return tcell.ColorGreen
+	case "yellow":
+		return tcell.ColorYellow
+	default:
+		return tcell.ColorWhite
 	}
 }
 
