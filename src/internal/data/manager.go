@@ -17,12 +17,8 @@ type Manager struct {
 
 // NewManager creates a new data manager
 func NewManager(saveFile, leaderboardFile string) *Manager {
-	// Get user's home directory for data storage
-	homeDir, err := os.UserHomeDir()
-	if err != nil {
-		homeDir = "."
-	}
-	dataDir := filepath.Join(homeDir, ".go-rogue")
+	// Get executable directory for data storage (so data persists with the build)
+	dataDir := getExecutableDir()
 
 	// Create data directory if it doesn't exist
 	os.MkdirAll(dataDir, 0755)
@@ -32,6 +28,24 @@ func NewManager(saveFile, leaderboardFile string) *Manager {
 		leaderboardFile: filepath.Join(dataDir, leaderboardFile),
 		dataDir:         dataDir,
 	}
+}
+
+// getExecutableDir returns the directory where the executable is located
+func getExecutableDir() string {
+	// Try to get executable path
+	exePath, err := os.Executable()
+	if err == nil {
+		return filepath.Dir(exePath)
+	}
+
+	// Fallback to current working directory
+	cwd, err := os.Getwd()
+	if err == nil {
+		return cwd
+	}
+
+	// Last resort fallback
+	return "."
 }
 
 // SaveGame saves the current game state

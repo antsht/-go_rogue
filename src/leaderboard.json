@@ -1,0 +1,19 @@
+{
+  "results": [
+    {
+      "session_id": "20260113221207",
+      "level_reached": 4,
+      "gold_collected": 419,
+      "enemies_defeated": 6,
+      "food_consumed": 5,
+      "elixirs_drunk": 0,
+      "scrolls_read": 4,
+      "hits_dealt": 22,
+      "hits_received": 15,
+      "tiles_traveled": 563,
+      "turn_count": 589,
+      "victory": false,
+      "timestamp": "2026-01-13T22:15:00.2796353+03:00"
+    }
+  ]
+}
