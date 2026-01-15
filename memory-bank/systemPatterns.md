@@ -16,8 +16,9 @@ World generation
 - Start room is random corner; exit is opposite corner with `%` tile.
 - Enemies and items placed per level depth; difficulty modifier influences
   counts.
-- Bonus features: colored doors/keys (softlock checks) and mimics.
-- Mimics are spawned during standard enemy placement (with level-based caps).
+- Bonus features: colored doors/keys (softlock checks via BFS/DFS) and mimics.
+- Mimics spawn during `placeEnemies` with 20% chance, capped at `(levelNum/3)+1` (max 4).
+- Mimic item appearance randomized via `RandomMimickedItem` (treasure 40%, weapon/scroll/elixir).
 
 Combat & AI
 - Hit chance derived from dexterity; damage from strength with variance.
