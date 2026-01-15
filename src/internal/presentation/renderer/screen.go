@@ -332,7 +332,7 @@ func (s *Screen) DrawStatusBar(session *entities.Session, offsetX, offsetY int) 
 		s.SetCell(x+offsetX, y+2, ' ', tcell.ColorWhite, tcell.ColorBlack)
 	}
 
-	// Format: Level:X  Hits:XX(XX)  Str:XX(XX)  Gold:XXX  Armor:X  Exp:X/XX
+	// Format: Level:X  Hits:XX(XX)  Str:XX(XX)  Gold:XXX  Armor:X
 	status := []struct {
 		label string
 		value string
@@ -378,13 +378,6 @@ func (s *Screen) DrawStatusBar(session *entities.Session, offsetX, offsetY int) 
 	s.DrawString(x, y, "Armor:", tcell.ColorWhite, tcell.ColorBlack)
 	x += 6
 	s.DrawString(x, y, itoa(char.Armor), tcell.ColorTeal, tcell.ColorBlack)
-	x += len(itoa(char.Armor)) + 4
-
-	// Exp
-	s.DrawString(x, y, "Exp:", tcell.ColorWhite, tcell.ColorBlack)
-	x += 4
-	expStr := itoa(char.Level) + "/" + itoa(char.Experience)
-	s.DrawString(x, y, expStr, tcell.ColorPurple, tcell.ColorBlack)
 
 	// Draw last two messages on status lines
 	msgCount := len(session.Messages)

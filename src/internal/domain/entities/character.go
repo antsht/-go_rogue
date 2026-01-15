@@ -2,18 +2,15 @@ package entities
 
 // Character represents the player character
 type Character struct {
-	Position      Position  `json:"position"`
-	MaxHealth     int       `json:"max_health"`
-	Health        int       `json:"health"`
-	Dexterity     int       `json:"dexterity"`
-	Strength      int       `json:"strength"`
-	Weapon        *Item     `json:"weapon"`
-	Backpack      *Backpack `json:"backpack"`
-	Experience    int       `json:"experience"`
-	ExperienceMax int       `json:"experience_max"`
-	Level         int       `json:"level"`
-	Gold          int       `json:"gold"`
-	Armor         int       `json:"armor"`
+	Position  Position  `json:"position"`
+	MaxHealth int       `json:"max_health"`
+	Health    int       `json:"health"`
+	Dexterity int       `json:"dexterity"`
+	Strength  int       `json:"strength"`
+	Weapon    *Item     `json:"weapon"`
+	Backpack  *Backpack `json:"backpack"`
+	Gold      int       `json:"gold"`
+	Armor     int       `json:"armor"`
 
 	// Status effects
 	Asleep        bool     `json:"asleep"`
@@ -59,9 +56,6 @@ func NewCharacter() *Character {
 		Dexterity:     10,
 		Strength:      16,
 		Backpack:      NewBackpack(),
-		Experience:    0,
-		ExperienceMax: 28,
-		Level:         1,
 		Gold:          0,
 		Armor:         5,
 		ActiveEffects: make([]Effect, 0),
