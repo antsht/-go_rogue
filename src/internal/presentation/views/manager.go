@@ -63,6 +63,12 @@ func (m *Manager) CurrentView() ViewType {
 func (m *Manager) Render() {
 	m.screen.Clear()
 
+	// Check if terminal is too small
+	if m.screen.IsTooSmall() {
+		m.screen.DrawTerminalTooSmall()
+		return
+	}
+
 	switch m.currentView {
 	case MainMenu:
 		m.menuView.Render()

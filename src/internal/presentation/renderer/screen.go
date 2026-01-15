@@ -5,6 +5,12 @@ import (
 	"github.com/user/go-rogue/internal/domain/entities"
 )
 
+// Minimum terminal dimensions required for the game
+const (
+	MinTerminalWidth  = 80 // Map width
+	MinTerminalHeight = 27 // Map height (24) + status bar (3)
+)
+
 // Screen wraps tcell screen functionality
 type Screen struct {
 	screen tcell.Screen
@@ -92,6 +98,75 @@ func (s *Screen) Size() (int, int) {
 // UpdateSize updates stored dimensions
 func (s *Screen) UpdateSize() {
 	s.width, s.height = s.screen.Size()
+}
+
+// IsTooSmall checks if terminal dimensions are below minimum requirements
+func (s *Screen) IsTooSmall() bool {
+	return s.width < MinTerminalWidth || s.height < MinTerminalHeight
+}
+
+// DrawTerminalTooSmall renders a message asking user to resize terminal
+func (s *Screen) DrawTerminalTooSmall() {
+	s.Clear()
+
+	// Message lines
+	lines := []string{
+		"Terminal too small!",
+		"",
+		"Please resize your terminal to at least:",
+		"",
+		"  Width:  80 columns",
+		"  Height: 27 rows",
+		"",
+		"Current size:",
+		"",
+		"  Width:  " + itoa(s.width) + " columns",
+		"  Height: " + itoa(s.height) + " rows",
+	}
+
+	// Find the longest line for centering
+	maxLen := 0
+	for _, line := range lines {
+		if len(line) > maxLen {
+			maxLen = len(line)
+		}
+	}
+
+	// Calculate starting position to center the message
+	startY := (s.height - len(lines)) / 2
+	if startY < 0 {
+		startY = 0
+	}
+
+	// Draw each line centered
+	for i, line := range lines {
+		startX := (s.width - len(line)) / 2
+		if startX < 0 {
+			startX = 0
+		}
+
+		y := startY + i
+		if y >= s.height {
+			break
+		}
+
+		// Use different colors for emphasis
+		fg := tcell.ColorWhite
+		if i == 0 {
+			fg = tcell.ColorRed // Title in red
+		} else if i == 4 || i == 5 {
+			fg = tcell.ColorYellow // Required dimensions in yellow
+		} else if i == 9 || i == 10 {
+			// Current dimensions - red if too small, green if OK
+			if (i == 9 && s.width < MinTerminalWidth) || (i == 10 && s.height < MinTerminalHeight) {
+				fg = tcell.ColorRed
+			} else {
+				fg = tcell.ColorGreen
+			}
+		}
+
+		s.DrawString(startX, y, line, fg, tcell.ColorBlack)
+	}
 }
 
 // PollEvent returns the next event
