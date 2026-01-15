@@ -15,13 +15,23 @@ type DifficultyManager struct {
 func NewDifficultyManager() *DifficultyManager {
 	return &DifficultyManager{
 		modifier:      1.0,
-		checkInterval: 50, // Check every 50 turns
+		checkInterval: 25, // Check every 25 turns
 	}
 }
 
 // GetModifier returns the current difficulty modifier
 func (d *DifficultyManager) GetModifier() float64 {
 	return d.modifier
+}
+
+// SetModifier sets the difficulty modifier (used when loading saved games)
+func (d *DifficultyManager) SetModifier(mod float64) {
+	if mod < 0.5 {
+		mod = 0.5
+	} else if mod > 1.5 {
+		mod = 1.5
+	}
+	d.modifier = mod
 }
 
 // Update updates the difficulty based on player performance

@@ -54,6 +54,10 @@ func (e *Engine) NewGame() {
 	// Create new session
 	e.session = entities.NewSession()
 
+	// Preserve difficulty from previous game in this session
+	// (DifficultyManager persists across games, only resets on fresh terminal start)
+	e.session.DifficultyModifier = e.difficulty.GetModifier()
+
 	// Generate first level
 	e.generateLevel(1)
 
@@ -79,6 +83,9 @@ func (e *Engine) ContinueGame() bool {
 	e.session = saveData.Session
 	e.levelSeeds = saveData.AllLevelSeeds
 	e.currentSeed = saveData.LevelSeed
+
+	// Restore difficulty modifier from saved session
+	e.difficulty.SetModifier(e.session.DifficultyModifier)
 
 	// Store character position before regenerating level
 	charPos := e.session.Character.Position
