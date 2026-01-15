@@ -70,13 +70,13 @@ func (v *InventoryViewRender) Render() {
 	v.renderItemSection(sectionX+sectionWidth+2, offsetY+3, "FOOD [j]", backpack.GetFood(), sectionWidth)
 
 	// Elixirs section
-	v.renderItemSection(sectionX, offsetY+14, "ELIXIRS [k]", backpack.GetElixirs(), sectionWidth)
+	v.renderItemSection(sectionX, offsetY+16, "ELIXIRS [k]", backpack.GetElixirs(), sectionWidth)
 
 	// Scrolls section
-	v.renderItemSection(sectionX+sectionWidth+2, offsetY+14, "SCROLLS [e]", backpack.GetScrolls(), sectionWidth)
+	v.renderItemSection(sectionX+sectionWidth+2, offsetY+16, "SCROLLS [e]", backpack.GetScrolls(), sectionWidth)
 
 	// Instructions at bottom of game area
-	instructY := offsetY + 24
+	instructY := offsetY + 28
 	if instructY > height-3 {
 		instructY = height - 3
 	}

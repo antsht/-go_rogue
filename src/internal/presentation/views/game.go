@@ -77,7 +77,7 @@ func (v *GameViewRender) renderItemSelection(session *entities.Session, offsetX,
 	boxWidth := 35
 	boxX := offsetX + entities.MapWidth - boxWidth - 1
 	boxY := offsetY + 1
-	boxHeight := 12
+	boxHeight := 15
 
 	// Draw background
 	for y := boxY; y < boxY+boxHeight; y++ {
