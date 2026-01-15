@@ -140,10 +140,69 @@ func NewMimic(level int) *Enemy {
 	}
 }
 
+// NewMimicWithItem creates a mimic enemy that appears as a random item
+func NewMimicWithItem(level int, rng *rand.Rand) *Enemy {
+	mimic := NewMimic(level)
+	mimic.SetMimickedItem(RandomMimickedItem(rng))
+	return mimic
+}
+
+// RandomMimickedItem selects what item type the mimic appears as
+func RandomMimickedItem(rng *rand.Rand) *Item {
+	intn := rand.Intn
+	if rng != nil {
+		intn = rng.Intn
+	}
+
+	roll := intn(100)
+	if roll < 40 {
+		// Treasure (most common - enticing!)
+		return &Item{
+			Type:   ItemTypeTreasure,
+			Symbol: '*',
+			Color:  "yellow",
+			Name:   "Gold",
+		}
+	} else if roll < 60 {
+		// Weapon
+		return &Item{
+			Type:   ItemTypeWeapon,
+			Symbol: ')',
+			Color:  "cyan",
+			Name:   "Weapon",
+		}
+	} else if roll < 80 {
+		// Scroll
+		return &Item{
+			Type:   ItemTypeScroll,
+			Symbol: '?',
+			Color:  "white",
+			Name:   "Scroll",
+		}
+	}
+
+	// Elixir
+	return &Item{
+		Type:   ItemTypeElixir,
+		Symbol: '!',
+		Color:  "magenta",
+		Name:   "Elixir",
+	}
+}
+
 // CreateEnemyForLevel creates a random enemy appropriate for the level
 func CreateEnemyForLevel(level int) *Enemy {
+	return CreateEnemyForLevelWithRNG(level, nil)
+}
+
+// CreateEnemyForLevelWithRNG creates a random enemy appropriate for the level using rng
+func CreateEnemyForLevelWithRNG(level int, rng *rand.Rand) *Enemy {
 	// Harder enemies appear more frequently at deeper levels
-	roll := rand.Intn(100)
+	intn := rand.Intn
+	if rng != nil {
+		intn = rng.Intn
+	}
+	roll := intn(100)
 
 	if level < 5 {
 		// Early levels: mostly zombies and ghosts

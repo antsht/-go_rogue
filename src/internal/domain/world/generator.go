@@ -15,16 +15,14 @@ const (
 
 // Generator handles procedural level generation
 type Generator struct {
-	rng         *rand.Rand
-	doorSystem  *DoorKeySystem
-	mimicPlacer *MimicPlacer
+	rng        *rand.Rand
+	doorSystem *DoorKeySystem
 }
 
 // NewGenerator creates a new level generator
 func NewGenerator() *Generator {
 	return &Generator{
-		doorSystem:  NewDoorKeySystem(),
-		mimicPlacer: NewMimicPlacer(),
+		doorSystem: NewDoorKeySystem(),
 	}
 }
 
@@ -59,9 +57,6 @@ func (g *Generator) Generate(levelNum int, seed int64, difficultyMod float64) *e
 	if levelNum >= 2 {
 		g.doorSystem.AddDoorsAndKeys(level, seed+1)
 	}
-
-	// Bonus Task 8: Add mimics
-	g.mimicPlacer.PlaceMimics(level, levelNum, seed+2)
 
 	return level
 }
@@ -358,6 +353,14 @@ func (g *Generator) placeEnemies(level *entities.Level, levelNum int, difficulty
 	}
 
 	enemiesPlaced := 0
+	maxMimics := 0
+	if levelNum >= 2 {
+		maxMimics = (levelNum / 3) + 1
+		if maxMimics > 4 {
+			maxMimics = 4
+		}
+	}
+	mimicsPlaced := 0
 
 	for _, room := range level.Rooms {
 		// Skip start room
@@ -372,7 +375,13 @@ func (g *Generator) placeEnemies(level *entities.Level, levelNum int, difficulty
 		}
 
 		for i := 0; i < roomEnemies && enemiesPlaced < maxEnemies; i++ {
-			enemy := entities.CreateEnemyForLevel(levelNum)
+			var enemy *entities.Enemy
+			if mimicsPlaced < maxMimics && g.rng.Float64() < 0.2 {
+				enemy = entities.NewMimicWithItem(levelNum, g.rng)
+				mimicsPlaced++
+			} else {
+				enemy = entities.CreateEnemyForLevelWithRNG(levelNum, g.rng)
+			}
 
 			// Random position in room
 			pos := room.GetRandomFloorPosition(entities.NewRNG(g.rng.Int63()))
