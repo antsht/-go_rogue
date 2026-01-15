@@ -378,6 +378,23 @@ func (s *Screen) DrawStatusBar(session *entities.Session, offsetX, offsetY int) 
 	s.DrawString(x, y, "Armor:", tcell.ColorWhite, tcell.ColorBlack)
 	x += 6
 	s.DrawString(x, y, itoa(char.Armor), tcell.ColorTeal, tcell.ColorBlack)
+	x += len(itoa(char.Armor)) + 2
+
+	// Difficulty
+	diffMod := session.DifficultyModifier
+	if diffMod == 0 {
+		diffMod = 1.0 // Default if not set
+	}
+	diffStr := formatDifficulty(diffMod)
+	diffColor := tcell.ColorWhite
+	if diffMod < 0.9 {
+		diffColor = tcell.ColorGreen // Easier
+	} else if diffMod > 1.1 {
+		diffColor = tcell.ColorRed // Harder
+	}
+	s.DrawString(x, y, "Diff:", tcell.ColorWhite, tcell.ColorBlack)
+	x += 5
+	s.DrawString(x, y, diffStr, diffColor, tcell.ColorBlack)
 
 	// Draw last two messages on status lines
 	msgCount := len(session.Messages)
@@ -394,6 +411,15 @@ func (s *Screen) DrawStatusBar(session *entities.Session, offsetX, offsetY int) 
 
 	// Ignore unused variable
 	_ = status
+}
+
+// formatDifficulty converts difficulty modifier to display string (e.g., "1.0x")
+func formatDifficulty(d float64) string {
+	// Convert to tenths (e.g., 1.2 -> 12)
+	tenths := int(d*10 + 0.5) // Round to nearest tenth
+	whole := tenths / 10
+	frac := tenths % 10
+	return itoa(whole) + "." + itoa(frac) + "x"
 }
 
 // itoa converts int to string without importing strconv
