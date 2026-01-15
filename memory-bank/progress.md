@@ -16,7 +16,8 @@ Completed Tasks
 
 What works
 - 21-level dungeon flow with deterministic seeds per level
-- Procedural rooms/corridors and fog of war visibility
+- Procedural rooms/corridors (6-13 wide, 4-6 tall) and fog of war visibility
+- Gold/treasure spawning with level-scaled values
 - Turn-based combat and all enemy AI behaviors (Zombie, Vampire, Ghost, Ogre, Snake-Mage, Mimic)
 - Item pickup/use, inventory view (HJKE keys), and status HUD
 - Save/continue and leaderboard persistence
