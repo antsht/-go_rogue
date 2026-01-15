@@ -3,7 +3,7 @@ package entities
 const (
 	// Map dimensions - based on classic Rogue
 	MapWidth  = 80
-	MapHeight = 24
+	MapHeight = 26
 
 	// Grid dimensions for room placement
 	GridWidth  = 3

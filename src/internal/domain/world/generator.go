@@ -8,9 +8,9 @@ import (
 
 const (
 	MinRoomWidth  = 6
-	MaxRoomWidth  = 12
+	MaxRoomWidth  = 13
 	MinRoomHeight = 4
-	MaxRoomHeight = 5 // Capped to fit within section height (7) with margins
+	MaxRoomHeight = 6 // Capped to fit within section height (8) with margins
 )
 
 // Generator handles procedural level generation
@@ -450,16 +450,26 @@ func (g *Generator) placeItems(level *entities.Level, levelNum int, difficultyMo
 func (g *Generator) generateItem(levelNum int) *entities.Item {
 	roll := g.rng.Intn(100)
 
-	if roll < 35 {
-		// Food (35%)
+	if roll < 15 {
+		// Treasure/Gold (15%)
+		// Gold value scales with level depth
+		baseGold := 10 + levelNum*5
+		variance := g.rng.Intn(baseGold/2+1) - baseGold/4
+		goldValue := baseGold + variance
+		if goldValue < 5 {
+			goldValue = 5
+		}
+		return entities.NewTreasure(goldValue)
+	} else if roll < 45 {
+		// Food (30%)
 		subtypes := []entities.ItemSubtype{
 			entities.SubtypeRation,
 			entities.SubtypeFruit,
 			entities.SubtypeMeat,
 		}
 		return entities.NewFood(subtypes[g.rng.Intn(len(subtypes))])
-	} else if roll < 55 {
-		// Elixir (20%)
+	} else if roll < 60 {
+		// Elixir (15%)
 		subtypes := []entities.ItemSubtype{
 			entities.SubtypeStrengthElixir,
 			entities.SubtypeDexterityElixir,
@@ -467,7 +477,7 @@ func (g *Generator) generateItem(levelNum int) *entities.Item {
 		}
 		return entities.NewElixir(subtypes[g.rng.Intn(len(subtypes))])
 	} else if roll < 75 {
-		// Scroll (20%)
+		// Scroll (15%)
 		subtypes := []entities.ItemSubtype{
 			entities.SubtypeStrengthScroll,
 			entities.SubtypeDexterityScroll,
