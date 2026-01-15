@@ -48,10 +48,8 @@ type Handler struct {
 	viewManager *views.Manager
 	gameEngine  *game.Engine
 
-	// Debounce for cancel keys to prevent key repeat issues
-	lastCancelTime int64
-	// Debounce for toggle keys (I, h, j, k, e) to prevent key repeat issues
-	lastToggleTime int64
+	// Debounce timestamp to prevent key repeat issues
+	lastKeyTime int64
 }
 
 // NewHandler creates a new input handler
@@ -96,12 +94,12 @@ func (h *Handler) handleKeyEvent(ev *tcell.EventKey) Action {
 
 	// Handle cancel/escape for item selection and inventory FIRST (before global handler)
 	if isEscapeAction {
-		// Debounce: ignore cancel keys within 100ms of last cancel (prevents key repeat issues)
+		// Debounce: ignore keys within 100ms of last key (prevents key repeat issues)
 		now := time.Now().UnixMilli()
-		if now-h.lastCancelTime < 100 {
+		if now-h.lastKeyTime < 100 {
 			return ActionNone
 		}
-		h.lastCancelTime = now
+		h.lastKeyTime = now
 
 		// If in GameView with item selection active, cancel selection first
 		if currentView == views.GameView && selectingItem {
@@ -173,6 +171,7 @@ func (h *Handler) handleMenuInput(ev *tcell.EventKey) Action {
 			return ActionContinue
 		}
 	case 'l', 'L':
+		h.lastKeyTime = time.Now().UnixMilli()
 		h.viewManager.SetView(views.LeaderboardView)
 		return ActionLeaderboard
 	case 'q', 'Q':
@@ -228,34 +227,34 @@ func (h *Handler) handleGameInput(ev *tcell.EventKey) Action {
 
 	// Item usage keys (with debounce for toggle support)
 	case 'h', 'H':
-		if now-h.lastToggleTime >= 100 {
-			h.lastToggleTime = now
+		if now-h.lastKeyTime >= 100 {
+			h.lastKeyTime = now
 			h.gameEngine.StartItemSelection(entities.ItemTypeWeapon)
 			return ActionUseWeapon
 		}
 	case 'j', 'J':
-		if now-h.lastToggleTime >= 100 {
-			h.lastToggleTime = now
+		if now-h.lastKeyTime >= 100 {
+			h.lastKeyTime = now
 			h.gameEngine.StartItemSelection(entities.ItemTypeFood)
 			return ActionUseFood
 		}
 	case 'k', 'K':
-		if now-h.lastToggleTime >= 100 {
-			h.lastToggleTime = now
+		if now-h.lastKeyTime >= 100 {
+			h.lastKeyTime = now
 			h.gameEngine.StartItemSelection(entities.ItemTypeElixir)
 			return ActionUseElixir
 		}
 	case 'e', 'E':
-		if now-h.lastToggleTime >= 100 {
-			h.lastToggleTime = now
+		if now-h.lastKeyTime >= 100 {
+			h.lastKeyTime = now
 			h.gameEngine.StartItemSelection(entities.ItemTypeScroll)
 			return ActionUseScroll
 		}
 
 	// Inventory (with debounce for toggle support)
 	case 'i', 'I':
-		if now-h.lastToggleTime >= 100 {
-			h.lastToggleTime = now
+		if now-h.lastKeyTime >= 100 {
+			h.lastKeyTime = now
 			h.viewManager.SetView(views.InventoryView)
 			return ActionNone
 		}
@@ -293,46 +292,46 @@ func (h *Handler) handleItemSelection(ev *tcell.EventKey) Action {
 
 	// Toggle off if pressing the same key that opened this selection (with debounce)
 	now := time.Now().UnixMilli()
-	if now-h.lastToggleTime >= 100 {
+	if now-h.lastKeyTime >= 100 {
 		switch ev.Rune() {
 		case 'h', 'H':
 			if session.SelectingItemType == entities.ItemTypeWeapon {
-				h.lastToggleTime = now
+				h.lastKeyTime = now
 				h.gameEngine.CancelItemSelection()
 				return ActionCancel
 			}
 			// Switch to different item type
-			h.lastToggleTime = now
+			h.lastKeyTime = now
 			h.gameEngine.CancelItemSelection()
 			h.gameEngine.StartItemSelection(entities.ItemTypeWeapon)
 			return ActionUseWeapon
 		case 'j', 'J':
 			if session.SelectingItemType == entities.ItemTypeFood {
-				h.lastToggleTime = now
+				h.lastKeyTime = now
 				h.gameEngine.CancelItemSelection()
 				return ActionCancel
 			}
-			h.lastToggleTime = now
+			h.lastKeyTime = now
 			h.gameEngine.CancelItemSelection()
 			h.gameEngine.StartItemSelection(entities.ItemTypeFood)
 			return ActionUseFood
 		case 'k', 'K':
 			if session.SelectingItemType == entities.ItemTypeElixir {
-				h.lastToggleTime = now
+				h.lastKeyTime = now
 				h.gameEngine.CancelItemSelection()
 				return ActionCancel
 			}
-			h.lastToggleTime = now
+			h.lastKeyTime = now
 			h.gameEngine.CancelItemSelection()
 			h.gameEngine.StartItemSelection(entities.ItemTypeElixir)
 			return ActionUseElixir
 		case 'e', 'E':
 			if session.SelectingItemType == entities.ItemTypeScroll {
-				h.lastToggleTime = now
+				h.lastKeyTime = now
 				h.gameEngine.CancelItemSelection()
 				return ActionCancel
 			}
-			h.lastToggleTime = now
+			h.lastKeyTime = now
 			h.gameEngine.CancelItemSelection()
 			h.gameEngine.StartItemSelection(entities.ItemTypeScroll)
 			return ActionUseScroll
@@ -397,37 +396,37 @@ func (h *Handler) handleInventoryInput(ev *tcell.EventKey) Action {
 
 	// Toggle inventory with I (with debounce)
 	case 'i', 'I':
-		if now-h.lastToggleTime >= 100 {
-			h.lastToggleTime = now
+		if now-h.lastKeyTime >= 100 {
+			h.lastKeyTime = now
 			h.viewManager.SetView(views.GameView)
 			return ActionCancel
 		}
 
 	// Open item menus from inventory (with debounce)
 	case 'h', 'H':
-		if now-h.lastToggleTime >= 100 {
-			h.lastToggleTime = now
+		if now-h.lastKeyTime >= 100 {
+			h.lastKeyTime = now
 			h.viewManager.SetView(views.GameView)
 			h.gameEngine.StartItemSelection(entities.ItemTypeWeapon)
 			return ActionUseWeapon
 		}
 	case 'j', 'J':
-		if now-h.lastToggleTime >= 100 {
-			h.lastToggleTime = now
+		if now-h.lastKeyTime >= 100 {
+			h.lastKeyTime = now
 			h.viewManager.SetView(views.GameView)
 			h.gameEngine.StartItemSelection(entities.ItemTypeFood)
 			return ActionUseFood
 		}
 	case 'k', 'K':
-		if now-h.lastToggleTime >= 100 {
-			h.lastToggleTime = now
+		if now-h.lastKeyTime >= 100 {
+			h.lastKeyTime = now
 			h.viewManager.SetView(views.GameView)
 			h.gameEngine.StartItemSelection(entities.ItemTypeElixir)
 			return ActionUseElixir
 		}
 	case 'e', 'E':
-		if now-h.lastToggleTime >= 100 {
-			h.lastToggleTime = now
+		if now-h.lastKeyTime >= 100 {
+			h.lastKeyTime = now
 			h.viewManager.SetView(views.GameView)
 			h.gameEngine.StartItemSelection(entities.ItemTypeScroll)
 			return ActionUseScroll
@@ -439,19 +438,13 @@ func (h *Handler) handleInventoryInput(ev *tcell.EventKey) Action {
 
 // handleLeaderboardInput processes leaderboard view input
 func (h *Handler) handleLeaderboardInput(ev *tcell.EventKey) Action {
-	switch ev.Key() {
-	case tcell.KeyEscape, tcell.KeyEnter:
-		h.viewManager.SetView(views.MainMenu)
-		return ActionCancel
+	// Debounce: ignore keys within 150ms of last key (prevents 'L' key from closing immediately)
+	if time.Now().UnixMilli()-h.lastKeyTime < 150 {
+		return ActionNone
 	}
-
-	switch ev.Rune() {
-	case 'q', 'Q':
-		h.viewManager.SetView(views.MainMenu)
-		return ActionCancel
-	}
-
-	return ActionNone
+	// Any key closes the leaderboard
+	h.viewManager.SetView(views.MainMenu)
+	return ActionCancel
 }
 
 // handleGameOverInput processes game over view input

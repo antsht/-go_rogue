@@ -1,6 +1,21 @@
 {
   "results": [
     {
+      "session_id": "20260115141033",
+      "level_reached": 4,
+      "gold_collected": 491,
+      "enemies_defeated": 9,
+      "food_consumed": 2,
+      "elixirs_drunk": 4,
+      "scrolls_read": 3,
+      "hits_dealt": 29,
+      "hits_received": 20,
+      "tiles_traveled": 683,
+      "turn_count": 720,
+      "victory": false,
+      "timestamp": "2026-01-15T14:13:37.402211+03:00"
+    },
+    {
       "session_id": "20260113221207",
       "level_reached": 4,
       "gold_collected": 419,
@@ -14,6 +29,21 @@
       "turn_count": 589,
       "victory": false,
       "timestamp": "2026-01-13T22:15:00.2796353+03:00"
+    },
+    {
+      "session_id": "20260113221627",
+      "level_reached": 3,
+      "gold_collected": 134,
+      "enemies_defeated": 2,
+      "food_consumed": 3,
+      "elixirs_drunk": 0,
+      "scrolls_read": 0,
+      "hits_dealt": 12,
+      "hits_received": 10,
+      "tiles_traveled": 523,
+      "turn_count": 539,
+      "victory": false,
+      "timestamp": "2026-01-15T14:10:18.9067726+03:00"
     }
   ]
 }
