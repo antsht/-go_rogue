@@ -149,6 +149,15 @@ func (e *Engine) MovePlayer(dir entities.Direction) bool {
 
 	// Check for enemy at new position
 	if enemy := level.GetEnemyAt(newPos); enemy != nil {
+		// If it's an unrevealed mimic, reveal and let it take its turn
+		if enemy.Type == entities.EnemyMimic && !enemy.IsRevealed {
+			enemy.RevealMimic()
+			enemy.IsAggro = true
+			e.session.AddMessage("It's a Mimic!")
+			e.processTurn()
+			return true
+		}
+
 		// Attack the enemy
 		e.combat.PlayerAttack(e.session, enemy)
 		e.processTurn()

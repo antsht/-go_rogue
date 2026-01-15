@@ -38,6 +38,11 @@ func (ai *AI) ProcessEnemies(session *entities.Session) {
 func (ai *AI) processEnemy(session *entities.Session, enemy *entities.Enemy, playerPos entities.Position, room *entities.Room) {
 	distance := enemy.Position.Distance(playerPos)
 
+	// Mimics stay inert until revealed by the player.
+	if enemy.Type == entities.EnemyMimic && !enemy.IsRevealed {
+		return
+	}
+
 	// Check if player is in hostility range
 	if distance <= enemy.Hostility {
 		enemy.IsAggro = true
