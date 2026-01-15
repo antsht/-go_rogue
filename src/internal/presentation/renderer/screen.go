@@ -105,6 +105,19 @@ func (s *Screen) IsTooSmall() bool {
 	return s.width < MinTerminalWidth || s.height < MinTerminalHeight
 }
 
+// GetGameAreaOffset returns the X,Y offset to center the game area (80x27)
+func (s *Screen) GetGameAreaOffset() (int, int) {
+	offsetX := (s.width - MinTerminalWidth) / 2
+	offsetY := (s.height - MinTerminalHeight) / 2
+	if offsetX < 0 {
+		offsetX = 0
+	}
+	if offsetY < 0 {
+		offsetY = 0
+	}
+	return offsetX, offsetY
+}
+
 // DrawTerminalTooSmall renders a message asking user to resize terminal
 func (s *Screen) DrawTerminalTooSmall() {
 	s.Clear()
@@ -236,14 +249,14 @@ func (s *Screen) DrawFilledBox(x, y, width, height int, fg, bg tcell.Color, fill
 	}
 }
 
-// DrawLevel renders a dungeon level
-func (s *Screen) DrawLevel(level *entities.Level, playerPos entities.Position) {
+// DrawLevel renders a dungeon level with offset for centering
+func (s *Screen) DrawLevel(level *entities.Level, playerPos entities.Position, offsetX, offsetY int) {
 	for y := 0; y < entities.MapHeight; y++ {
 		for x := 0; x < entities.MapWidth; x++ {
 			tile := &level.Tiles[y][x]
 
 			if !tile.Explored {
-				s.SetCell(x, y, ' ', tcell.ColorBlack, tcell.ColorBlack)
+				s.SetCell(x+offsetX, y+offsetY, ' ', tcell.ColorBlack, tcell.ColorBlack)
 				continue
 			}
 
@@ -282,41 +295,41 @@ func (s *Screen) DrawLevel(level *entities.Level, playerPos entities.Position) {
 				ch = '\''
 			}
 
-			s.SetCell(x, y, ch, fg, bg)
+			s.SetCell(x+offsetX, y+offsetY, ch, fg, bg)
 		}
 	}
 }
 
-// DrawCharacter draws the player character
-func (s *Screen) DrawCharacter(pos entities.Position) {
-	s.SetCell(pos.X, pos.Y, '@', tcell.ColorGreen, tcell.ColorBlack)
+// DrawCharacter draws the player character with offset
+func (s *Screen) DrawCharacter(pos entities.Position, offsetX, offsetY int) {
+	s.SetCell(pos.X+offsetX, pos.Y+offsetY, '@', tcell.ColorGreen, tcell.ColorBlack)
 }
 
-// DrawEnemy draws an enemy
-func (s *Screen) DrawEnemy(enemy *entities.Enemy) {
+// DrawEnemy draws an enemy with offset
+func (s *Screen) DrawEnemy(enemy *entities.Enemy, offsetX, offsetY int) {
 	if !enemy.IsVisible {
 		return
 	}
 	fg := s.GetColor(enemy.GetDisplayColor())
-	s.SetCell(enemy.Position.X, enemy.Position.Y, enemy.GetDisplaySymbol(), fg, tcell.ColorBlack)
+	s.SetCell(enemy.Position.X+offsetX, enemy.Position.Y+offsetY, enemy.GetDisplaySymbol(), fg, tcell.ColorBlack)
 }
 
-// DrawItem draws an item
-func (s *Screen) DrawItem(item *entities.Item) {
+// DrawItem draws an item with offset
+func (s *Screen) DrawItem(item *entities.Item, offsetX, offsetY int) {
 	fg := s.GetColor(item.GetDisplayColor())
-	s.SetCell(item.Position.X, item.Position.Y, item.GetDisplaySymbol(), fg, tcell.ColorBlack)
+	s.SetCell(item.Position.X+offsetX, item.Position.Y+offsetY, item.GetDisplaySymbol(), fg, tcell.ColorBlack)
 }
 
-// DrawStatusBar draws the status bar at the bottom
-func (s *Screen) DrawStatusBar(session *entities.Session) {
-	y := entities.MapHeight
+// DrawStatusBar draws the status bar at the bottom with offset
+func (s *Screen) DrawStatusBar(session *entities.Session, offsetX, offsetY int) {
+	y := entities.MapHeight + offsetY
 	char := session.Character
 
-	// Clear status area (3 lines: stats + 2 message lines)
-	for x := 0; x < s.width; x++ {
-		s.SetCell(x, y, ' ', tcell.ColorWhite, tcell.ColorBlack)
-		s.SetCell(x, y+1, ' ', tcell.ColorWhite, tcell.ColorBlack)
-		s.SetCell(x, y+2, ' ', tcell.ColorWhite, tcell.ColorBlack)
+	// Clear status area (3 lines: stats + 2 message lines) - only within game area
+	for x := 0; x < entities.MapWidth; x++ {
+		s.SetCell(x+offsetX, y, ' ', tcell.ColorWhite, tcell.ColorBlack)
+		s.SetCell(x+offsetX, y+1, ' ', tcell.ColorWhite, tcell.ColorBlack)
+		s.SetCell(x+offsetX, y+2, ' ', tcell.ColorWhite, tcell.ColorBlack)
 	}
 
 	// Format: Level:X  Hits:XX(XX)  Str:XX(XX)  Gold:XXX  Armor:X  Exp:X/XX
@@ -328,7 +341,7 @@ func (s *Screen) DrawStatusBar(session *entities.Session) {
 		{"Level", string(rune('0' + session.CurrentLevel)), tcell.ColorWhite},
 	}
 
-	x := 0
+	x := offsetX
 	// Level
 	s.DrawString(x, y, "Level:", tcell.ColorWhite, tcell.ColorBlack)
 	x += 6
@@ -379,11 +392,11 @@ func (s *Screen) DrawStatusBar(session *entities.Session) {
 		// Show second-to-last message on first line (if exists)
 		if msgCount > 1 {
 			msg := session.Messages[msgCount-2]
-			s.DrawString(0, y+1, msg, tcell.ColorGray, tcell.ColorBlack)
+			s.DrawString(offsetX, y+1, msg, tcell.ColorGray, tcell.ColorBlack)
 		}
 		// Show last message on second line
 		msg := session.Messages[msgCount-1]
-		s.DrawString(0, y+2, msg, tcell.ColorWhite, tcell.ColorBlack)
+		s.DrawString(offsetX, y+2, msg, tcell.ColorWhite, tcell.ColorBlack)
 	}
 
 	// Ignore unused variable

@@ -31,15 +31,18 @@ func (v *GameViewRender) Render() {
 	level := session.Level
 	char := session.Character
 
+	// Get offset for centering the game area
+	offsetX, offsetY := v.screen.GetGameAreaOffset()
+
 	// Draw the level tiles
-	v.screen.DrawLevel(level, char.Position)
+	v.screen.DrawLevel(level, char.Position, offsetX, offsetY)
 
 	// Draw items in visible rooms
 	for _, room := range level.Rooms {
 		if room.Explored {
 			for _, item := range room.Items {
 				if level.Tiles[item.Position.Y][item.Position.X].Visible {
-					v.screen.DrawItem(item)
+					v.screen.DrawItem(item, offsetX, offsetY)
 				}
 			}
 		}
@@ -50,32 +53,30 @@ func (v *GameViewRender) Render() {
 		for _, enemy := range room.Enemies {
 			if enemy.IsAlive() && level.Tiles[enemy.Position.Y][enemy.Position.X].Visible {
 				if enemy.IsVisible || enemy.IsAggro {
-					v.screen.DrawEnemy(enemy)
+					v.screen.DrawEnemy(enemy, offsetX, offsetY)
 				}
 			}
 		}
 	}
 
 	// Draw the player character
-	v.screen.DrawCharacter(char.Position)
+	v.screen.DrawCharacter(char.Position, offsetX, offsetY)
 
 	// Draw status bar
-	v.screen.DrawStatusBar(session)
+	v.screen.DrawStatusBar(session, offsetX, offsetY)
 
 	// Draw item selection UI if active
 	if session.SelectingItem {
-		v.renderItemSelection(session)
+		v.renderItemSelection(session, offsetX, offsetY)
 	}
 }
 
 // renderItemSelection draws the item selection overlay
-func (v *GameViewRender) renderItemSelection(session *entities.Session) {
-	width, _ := v.screen.Size()
-
-	// Draw selection box (wider to fit stats)
+func (v *GameViewRender) renderItemSelection(session *entities.Session, offsetX, offsetY int) {
+	// Draw selection box (wider to fit stats) - positioned relative to game area
 	boxWidth := 35
-	boxX := width - boxWidth - 2
-	boxY := 1
+	boxX := offsetX + entities.MapWidth - boxWidth - 1
+	boxY := offsetY + 1
 	boxHeight := 12
 
 	// Draw background

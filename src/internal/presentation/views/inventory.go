@@ -32,49 +32,56 @@ func (v *InventoryViewRender) Render() {
 	char := session.Character
 	backpack := char.Backpack
 
-	// Draw title
+	// Get offset for centering the game area
+	offsetX, offsetY := v.screen.GetGameAreaOffset()
+
+	// Draw title centered
 	title := "═══ INVENTORY ═══"
-	v.screen.DrawString(width/2-len(title)/2, 1, title, tcell.ColorYellow, tcell.ColorBlack)
+	v.screen.DrawString(width/2-len(title)/2, offsetY+1, title, tcell.ColorYellow, tcell.ColorBlack)
 
 	// Draw character stats
-	statsY := 3
-	v.screen.DrawString(2, statsY, "CHARACTER STATS", tcell.ColorOrange, tcell.ColorBlack)
-	v.screen.DrawString(2, statsY+1, "────────────────", tcell.ColorOrange, tcell.ColorBlack)
-	v.screen.DrawString(2, statsY+2, "Health:    "+itoa(char.Health)+"/"+itoa(char.MaxHealth), tcell.ColorGreen, tcell.ColorBlack)
-	v.screen.DrawString(2, statsY+3, "Strength:  "+itoa(char.GetEffectiveStrength())+" ("+itoa(char.Strength)+")", tcell.ColorRed, tcell.ColorBlack)
-	v.screen.DrawString(2, statsY+4, "Dexterity: "+itoa(char.GetEffectiveDexterity())+" ("+itoa(char.Dexterity)+")", tcell.ColorTeal, tcell.ColorBlack)
-	v.screen.DrawString(2, statsY+5, "Armor:     "+itoa(char.Armor), tcell.ColorTeal, tcell.ColorBlack)
-	v.screen.DrawString(2, statsY+6, "Gold:      "+itoa(char.Gold), tcell.ColorYellow, tcell.ColorBlack)
+	statsY := offsetY + 3
+	v.screen.DrawString(offsetX+2, statsY, "CHARACTER STATS", tcell.ColorOrange, tcell.ColorBlack)
+	v.screen.DrawString(offsetX+2, statsY+1, "────────────────", tcell.ColorOrange, tcell.ColorBlack)
+	v.screen.DrawString(offsetX+2, statsY+2, "Health:    "+itoa(char.Health)+"/"+itoa(char.MaxHealth), tcell.ColorGreen, tcell.ColorBlack)
+	v.screen.DrawString(offsetX+2, statsY+3, "Strength:  "+itoa(char.GetEffectiveStrength())+" ("+itoa(char.Strength)+")", tcell.ColorRed, tcell.ColorBlack)
+	v.screen.DrawString(offsetX+2, statsY+4, "Dexterity: "+itoa(char.GetEffectiveDexterity())+" ("+itoa(char.Dexterity)+")", tcell.ColorTeal, tcell.ColorBlack)
+	v.screen.DrawString(offsetX+2, statsY+5, "Armor:     "+itoa(char.Armor), tcell.ColorTeal, tcell.ColorBlack)
+	v.screen.DrawString(offsetX+2, statsY+6, "Gold:      "+itoa(char.Gold), tcell.ColorYellow, tcell.ColorBlack)
 
 	// Current weapon
 	weaponStr := "None (Fists)"
 	if char.Weapon != nil {
 		weaponStr = char.Weapon.Name + " (+" + itoa(char.Weapon.Strength) + " ATK)"
 	}
-	v.screen.DrawString(2, statsY+8, "Weapon:    "+weaponStr, tcell.ColorWhite, tcell.ColorBlack)
+	v.screen.DrawString(offsetX+2, statsY+8, "Weapon:    "+weaponStr, tcell.ColorWhite, tcell.ColorBlack)
 
 	// Draw keys section (keys are level-specific)
-	v.renderKeysSection(2, statsY+10, backpack.GetKeys())
+	v.renderKeysSection(offsetX+2, statsY+10, backpack.GetKeys())
 
 	// Draw backpack sections
-	sectionX := 30
+	sectionX := offsetX + 30
 	sectionWidth := 25
 
 	// Weapons section
-	v.renderItemSection(sectionX, 3, "WEAPONS [h]", backpack.GetWeapons(), sectionWidth)
+	v.renderItemSection(sectionX, offsetY+3, "WEAPONS [h]", backpack.GetWeapons(), sectionWidth)
 
 	// Food section
-	v.renderItemSection(sectionX+sectionWidth+2, 3, "FOOD [j]", backpack.GetFood(), sectionWidth)
+	v.renderItemSection(sectionX+sectionWidth+2, offsetY+3, "FOOD [j]", backpack.GetFood(), sectionWidth)
 
 	// Elixirs section
-	v.renderItemSection(sectionX, 14, "ELIXIRS [k]", backpack.GetElixirs(), sectionWidth)
+	v.renderItemSection(sectionX, offsetY+14, "ELIXIRS [k]", backpack.GetElixirs(), sectionWidth)
 
 	// Scrolls section
-	v.renderItemSection(sectionX+sectionWidth+2, 14, "SCROLLS [e]", backpack.GetScrolls(), sectionWidth)
+	v.renderItemSection(sectionX+sectionWidth+2, offsetY+14, "SCROLLS [e]", backpack.GetScrolls(), sectionWidth)
 
-	// Instructions
-	v.screen.DrawString(2, height-3, "Press [H/J/K/E] to use items", tcell.ColorGray, tcell.ColorBlack)
-	v.screen.DrawString(2, height-2, "Press [I], [Q] or [Backspace] to close", tcell.ColorGray, tcell.ColorBlack)
+	// Instructions at bottom of game area
+	instructY := offsetY + 24
+	if instructY > height-3 {
+		instructY = height - 3
+	}
+	v.screen.DrawString(offsetX+2, instructY, "Press [H/J/K/E] to use items", tcell.ColorGray, tcell.ColorBlack)
+	v.screen.DrawString(offsetX+2, instructY+1, "Press [I], [Q] or [Backspace] to close", tcell.ColorGray, tcell.ColorBlack)
 }
 
 // renderItemSection renders a section of items
