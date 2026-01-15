@@ -67,8 +67,8 @@ func runGameLoop(inputHandler *input.Handler, viewManager *views.Manager, gameEn
 			return nil
 		}
 
-		// Process game logic if in game view
-		if viewManager.CurrentView() == views.GameView {
+		// Process game logic if in game view and the action did something
+		if viewManager.CurrentView() == views.GameView && action != input.ActionNone {
 			gameEngine.ProcessTurn()
 		}
 	}

@@ -176,6 +176,8 @@ func (e *Engine) MovePlayer(dir entities.Direction) bool {
 				e.session.AddMessage("The door is locked. You need a " + doorColor + " key.")
 			}
 		}
+		// Still process turn even if movement failed (enemies act)
+		e.processTurn()
 		return false
 	}
 
