@@ -20,15 +20,15 @@ func NewMimicPlacer() *MimicPlacer {
 func (m *MimicPlacer) PlaceMimics(level *entities.Level, levelNum int, seed int64) {
 	m.rng = rand.New(rand.NewSource(seed))
 
-	// Mimics only appear after level 5
-	if levelNum < 5 {
+	// Mimics only appear after level 2
+	if levelNum < 2 {
 		return
 	}
 
 	// Number of mimics based on level
-	numMimics := (levelNum - 4) / 4 // 1 at level 5-8, 2 at 9-12, etc.
-	if numMimics > 3 {
-		numMimics = 3
+	numMimics := (levelNum / 3) + 1
+	if numMimics > 4 {
+		numMimics = 4
 	}
 
 	mimicsPlaced := 0
