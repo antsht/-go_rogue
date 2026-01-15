@@ -16,13 +16,13 @@ const (
 // Generator handles procedural level generation
 type Generator struct {
 	rng        *rand.Rand
-	doorSystem *DoorKeySystem
+	doorSystem *DoorGenerator
 }
 
 // NewGenerator creates a new level generator
 func NewGenerator() *Generator {
 	return &Generator{
-		doorSystem: NewDoorKeySystem(),
+		doorSystem: NewDoorGenerator(),
 	}
 }
 
@@ -55,7 +55,8 @@ func (g *Generator) Generate(levelNum int, seed int64, difficultyMod float64) *e
 
 	// Bonus Task 6: Add doors and keys (starting from level 2, always)
 	if levelNum >= 2 {
-		g.doorSystem.AddDoorsAndKeys(level, seed+1)
+		doorRNG := rand.New(rand.NewSource(seed + 1))
+		g.doorSystem.AddDoors(level, doorRNG, true)
 	}
 
 	return level

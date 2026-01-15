@@ -6,14 +6,12 @@ import (
 	"github.com/user/go-rogue/internal/domain/entities"
 )
 
-// DoorKeySystem handles the colored door and key system (Bonus Task 6)
-type DoorKeySystem struct {
-	rng *rand.Rand
-}
+// DoorGenerator handles door placement and optional colored keys (Bonus Task 6)
+type DoorGenerator struct{}
 
-// NewDoorKeySystem creates a new door/key system
-func NewDoorKeySystem() *DoorKeySystem {
-	return &DoorKeySystem{}
+// NewDoorGenerator creates a new door generator
+func NewDoorGenerator() *DoorGenerator {
+	return &DoorGenerator{}
 }
 
 // DoorColor represents different door colors
@@ -38,9 +36,61 @@ type doorKeyPair struct {
 	keyPos   entities.Position
 }
 
-// AddDoorsAndKeys adds doors and keys to a level
-func (d *DoorKeySystem) AddDoorsAndKeys(level *entities.Level, seed int64) {
-	d.rng = rand.New(rand.NewSource(seed))
+// AddDoors adds doors to a level; if withKeys is true, doors are locked with keys
+func (d *DoorGenerator) AddDoors(level *entities.Level, rng *rand.Rand, withKeys bool) {
+	if rng == nil {
+		return
+	}
+
+	if withKeys {
+		d.addLockedDoorsWithKeys(level, rng)
+		return
+	}
+
+	d.addUnlockedDoors(level, rng)
+}
+
+func (d *DoorGenerator) addUnlockedDoors(level *entities.Level, rng *rand.Rand) {
+	// Target number of doors: 2-5 per level
+	targetDoors := 2 + rng.Intn(4)
+
+	corridors := d.shuffledCorridors(level, rng)
+	placedDoors := 0
+
+	for _, corridor := range corridors {
+		if placedDoors >= targetDoors {
+			break
+		}
+
+		// Skip corridors that are too short
+		if len(corridor.Points) <= 2 {
+			continue
+		}
+
+		// 70% chance to try adding a door to this corridor
+		if rng.Float64() > 0.7 {
+			continue
+		}
+
+		// Determine door position (middle of corridor)
+		midIdx := len(corridor.Points) / 2
+		doorPos := corridor.Points[midIdx]
+
+		corridor.AddDoor(doorPos, "", 0)
+		tile := level.GetTile(doorPos)
+		if tile != nil {
+			tile.Type = entities.TileDoor
+			tile.DoorColor = ""
+			tile.DoorLocked = false
+			tile.DoorKeyType = 0
+			tile.Symbol = '+'
+		}
+
+		placedDoors++
+	}
+}
+
+func (d *DoorGenerator) addLockedDoorsWithKeys(level *entities.Level, rng *rand.Rand) {
 
 	startRoom := level.GetStartRoom()
 	if startRoom == nil {
@@ -48,14 +98,10 @@ func (d *DoorKeySystem) AddDoorsAndKeys(level *entities.Level, seed int64) {
 	}
 
 	// Target number of doors: 2-5 per level
-	targetDoors := 2 + d.rng.Intn(4)
+	targetDoors := 2 + rng.Intn(4)
 
 	// Shuffle corridors for random selection
-	corridors := make([]*entities.Corridor, len(level.Corridors))
-	copy(corridors, level.Corridors)
-	d.rng.Shuffle(len(corridors), func(i, j int) {
-		corridors[i], corridors[j] = corridors[j], corridors[i]
-	})
+	corridors := d.shuffledCorridors(level, rng)
 
 	// Track placed doors and their keys
 	placedPairs := make([]doorKeyPair, 0)
@@ -75,7 +121,7 @@ func (d *DoorKeySystem) AddDoorsAndKeys(level *entities.Level, seed int64) {
 		}
 
 		// 70% chance to try adding a door to this corridor
-		if d.rng.Float64() > 0.7 {
+		if rng.Float64() > 0.7 {
 			continue
 		}
 
@@ -93,7 +139,7 @@ func (d *DoorKeySystem) AddDoorsAndKeys(level *entities.Level, seed int64) {
 		}
 		if !found {
 			// All colors used, pick any
-			selectedColor = doorColors[d.rng.Intn(len(doorColors))]
+			selectedColor = doorColors[rng.Intn(len(doorColors))]
 		}
 
 		// Determine door position (middle of corridor)
@@ -128,13 +174,13 @@ func (d *DoorKeySystem) AddDoorsAndKeys(level *entities.Level, seed int64) {
 		}
 
 		// Choose a room for the key
-		keyRoom := accessibleRooms[d.rng.Intn(len(accessibleRooms))]
-		keyPos := keyRoom.GetRandomFloorPosition(entities.NewRNG(d.rng.Int63()))
+		keyRoom := accessibleRooms[rng.Intn(len(accessibleRooms))]
+		keyPos := keyRoom.GetRandomFloorPosition(entities.NewRNG(rng.Int63()))
 
 		// Ensure key doesn't overlap with exit
 		attempts := 0
 		for keyPos.Equals(level.ExitPos) && attempts < 10 {
-			keyPos = keyRoom.GetRandomFloorPosition(entities.NewRNG(d.rng.Int63()))
+			keyPos = keyRoom.GetRandomFloorPosition(entities.NewRNG(rng.Int63()))
 			attempts++
 		}
 
@@ -169,8 +215,17 @@ func (d *DoorKeySystem) AddDoorsAndKeys(level *entities.Level, seed int64) {
 	d.verifySolvable(level)
 }
 
+func (d *DoorGenerator) shuffledCorridors(level *entities.Level, rng *rand.Rand) []*entities.Corridor {
+	corridors := make([]*entities.Corridor, len(level.Corridors))
+	copy(corridors, level.Corridors)
+	rng.Shuffle(len(corridors), func(i, j int) {
+		corridors[i], corridors[j] = corridors[j], corridors[i]
+	})
+	return corridors
+}
+
 // getAccessibleRoomsWithKeys returns rooms accessible from start with given keys (BFS)
-func (d *DoorKeySystem) getAccessibleRoomsWithKeys(level *entities.Level, startRoomID int, keys map[entities.ItemSubtype]bool) []*entities.Room {
+func (d *DoorGenerator) getAccessibleRoomsWithKeys(level *entities.Level, startRoomID int, keys map[entities.ItemSubtype]bool) []*entities.Room {
 	visited := make(map[int]bool)
 	accessible := make([]*entities.Room, 0)
 	queue := []int{startRoomID}
@@ -221,7 +276,7 @@ func (d *DoorKeySystem) getAccessibleRoomsWithKeys(level *entities.Level, startR
 }
 
 // verifySolvable verifies the level can be completed (no softlocks)
-func (d *DoorKeySystem) verifySolvable(level *entities.Level) {
+func (d *DoorGenerator) verifySolvable(level *entities.Level) {
 	startRoom := level.GetStartRoom()
 	if startRoom == nil {
 		return
@@ -256,7 +311,7 @@ func (d *DoorKeySystem) verifySolvable(level *entities.Level) {
 }
 
 // simulateKeyCollection simulates key collection without modifying door states
-func (d *DoorKeySystem) simulateKeyCollection(level *entities.Level, roomID int, keys map[entities.ItemSubtype]bool, visited map[int]bool, unlocked map[entities.ItemSubtype]bool) {
+func (d *DoorGenerator) simulateKeyCollection(level *entities.Level, roomID int, keys map[entities.ItemSubtype]bool, visited map[int]bool, unlocked map[entities.ItemSubtype]bool) {
 	if visited[roomID] {
 		return
 	}
@@ -304,7 +359,7 @@ func (d *DoorKeySystem) simulateKeyCollection(level *entities.Level, roomID int,
 }
 
 // removeAllKeys removes all keys from all rooms
-func (d *DoorKeySystem) removeAllKeys(level *entities.Level) {
+func (d *DoorGenerator) removeAllKeys(level *entities.Level) {
 	for _, room := range level.Rooms {
 		newItems := make([]*entities.Item, 0)
 		for _, item := range room.Items {
