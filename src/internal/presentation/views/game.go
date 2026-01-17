@@ -37,13 +37,11 @@ func (v *GameViewRender) Render() {
 	// Draw the level tiles
 	v.screen.DrawLevel(level, char.Position, offsetX, offsetY)
 
-	// Draw items in visible rooms
+	// Draw items in visible areas
 	for _, room := range level.Rooms {
-		if room.Explored {
-			for _, item := range room.Items {
-				if level.Tiles[item.Position.Y][item.Position.X].Visible {
-					v.screen.DrawItem(item, offsetX, offsetY)
-				}
+		for _, item := range room.Items {
+			if level.Tiles[item.Position.Y][item.Position.X].Visible {
+				v.screen.DrawItem(item, offsetX, offsetY)
 			}
 		}
 	}
