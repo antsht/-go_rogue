@@ -288,6 +288,7 @@ Low hostility
 Task 9 — Bonus: Fully Three-Dee
 Add a 3D rendering mode, in which:
 
+Still use ASCII characters in terminal
 The main view switches to a first-person 3D perspective.
 The 2D view remains available as a mini-map in the corner of the screen.
 Controls are adapted accordingly:
@@ -295,6 +296,5 @@ W — move forward
 S — move backward
 A — turn left
 D — turn right
-To render rooms and corridors in 3D, use Ray Casting and the goncurses library (or similar).
+To render rooms and corridors in 3D, use Ray Casting.
 Walls in rooms and tunnels must have textures, so that the player's movement is visually perceptible.
-An example implementation of 3D rendering can be found in the code-samples folder.

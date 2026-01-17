@@ -81,8 +81,8 @@ func (v *Visibility) revealRadius(level *entities.Level, center entities.Positio
 
 // castRaysFromPoint casts rays in all directions from a point
 func (v *Visibility) castRaysFromPoint(level *entities.Level, origin entities.Position, distance int) {
-	// Cast rays in 360 degrees
-	for angle := 0.0; angle < 360.0; angle += 5.0 {
+	// Cast rays in 360 degrees with finer granularity for better corridor visibility
+	for angle := 0.0; angle < 360.0; angle += 1.5 {
 		v.castRay(level, origin, angle, distance)
 	}
 }
@@ -106,11 +106,25 @@ func (v *Visibility) castRay(level *entities.Level, origin entities.Position, an
 			break
 		}
 
+		tile := level.GetTile(pos)
+		if tile == nil {
+			break
+		}
+
 		level.MarkVisible(pos, true)
 
 		// Stop at walls
-		tile := level.GetTile(pos)
-		if tile != nil && tile.Type == entities.TileWall {
+		if tile.Type == entities.TileWall {
+			break
+		}
+
+		// Stop at empty space (corridor boundary / unexplored void)
+		if tile.Type == entities.TileEmpty {
+			break
+		}
+
+		// Stop at locked doors (reveal door but don't see through)
+		if tile.Type == entities.TileDoor && tile.DoorLocked {
 			break
 		}
 	}
@@ -126,8 +140,8 @@ func (v *Visibility) castRaysIntoRoom(level *entities.Level, playerPos entities.
 	dy := float64(center.Y - playerPos.Y)
 	baseAngle := math.Atan2(dy, dx) * 180.0 / math.Pi
 
-	// Cast rays in a cone toward the room
-	for angle := baseAngle - 45; angle <= baseAngle+45; angle += 2 {
+	// Cast rays in a cone toward the room with finer granularity
+	for angle := baseAngle - 45; angle <= baseAngle+45; angle += 1.0 {
 		v.castRayIntoRoom(level, playerPos, angle, room)
 	}
 }
@@ -149,10 +163,20 @@ func (v *Visibility) castRayIntoRoom(level *entities.Level, origin entities.Posi
 			break
 		}
 
-		level.MarkVisible(pos, true)
-
 		tile := level.GetTile(pos)
 		if tile == nil {
+			break
+		}
+
+		level.MarkVisible(pos, true)
+
+		// Stop at empty space (corridor boundary)
+		if tile.Type == entities.TileEmpty {
+			break
+		}
+
+		// Stop at locked doors (reveal door but don't see through)
+		if tile.Type == entities.TileDoor && tile.DoorLocked {
 			break
 		}
 

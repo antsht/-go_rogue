@@ -32,6 +32,9 @@ Combat & AI
 Visibility
 - Rooms are fully revealed when entered; corridors use ray casting with
   Bresenham line-of-sight to lift fog of war near entrances.
+- Rays stop at: walls, empty tiles (corridor boundary), locked doors.
+- Open doors and room entrances allow rays to pass through.
+- Ray angle step: 1.5° for 360° casting, 1.0° for room peek cones.
 
 Persistence
 - Save data stores session plus per-level RNG seeds to regenerate levels
